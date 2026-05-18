@@ -1,0 +1,9 @@
+Deno  2.7.14 (stable, x86_64-unknown-linux-gnu, V8 14.7.173.20-rusty)
+Node  v22.13.1 (LTS)
+Node  v23.7.0 (current)
+Bun   1.1.43
+
+Host: leo (Vultr VPS, Ubuntu noble, kernel 6.8.0-111-generic)
+CPU governor: not pinned (sudo unavailable); ratios reported, absolutes informational only.
+kernel.perf_event_paranoid = 4 (sudo unavailable); native flamegraphs blocked.
+JS attribution via V8 --prof.

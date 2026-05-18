@@ -1,0 +1,109 @@
+Testing v8 version different from logging version
+Statistical profiling result from v8.log, (13918 ticks, 192 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+  10471   75.2%          /home/agent-loop/.agent-loop/instances/agent-309/tools/deno
+    475    3.4%          /usr/lib/x86_64-linux-gnu/libc.so.6
+      2    0.0%          [vdso]
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+    583    4.2%   19.6%  Builtin: CreateShallowObjectLiteral
+    333    2.4%   11.2%  Builtin: LoadIC
+    267    1.9%    9.0%  JS: *get ext:deno_webidl/00_webidl.js:755:14
+    116    0.8%    3.9%  Builtin: JSEntry
+    113    0.8%    3.8%  Builtin: ObjectAssign
+     65    0.5%    2.2%  Builtin: ArrayIteratorPrototypeNext
+     53    0.4%    1.8%  Builtin: CallApiCallbackOptimizedNoProfiling
+     52    0.4%    1.8%  Builtin: CallFunction_ReceiverIsAny
+     34    0.2%    1.1%  Builtin: Typeof
+     34    0.2%    1.1%  Builtin: LoadICTrampoline
+     31    0.2%    1.0%  Builtin: CEntry_Return1_ArgvOnStack_NoBuiltinExit
+     24    0.2%    0.8%  Builtin: SetDataProperties
+     14    0.1%    0.5%  Builtin: JSEntryTrampoline
+     11    0.1%    0.4%  Builtin: Call_ReceiverIsAny
+      4    0.0%    0.1%  JS: +<anonymous> ext:deno_webidl/00_webidl.js:870:19
+      1    0.0%    0.0%  Script: ~<anonymous> file:///tmp/sc_prim_hot.js:1:1
+      1    0.0%    0.0%  Builtin: FastNewStrictArguments
+
+ [C++]:
+   ticks  total  nonlib   name
+    624    4.5%   21.0%  __libc_malloc@@GLIBC_2.2.5
+    371    2.7%   12.5%  cfree@GLIBC_2.2.5
+     23    0.2%    0.8%  syscall@@GLIBC_2.2.5
+     12    0.1%    0.4%  __getpid@@GLIBC_2.2.5
+      6    0.0%    0.2%  __mmap@@GLIBC_PRIVATE
+      3    0.0%    0.1%  __munmap@@GLIBC_PRIVATE
+      1    0.0%    0.0%  exp2@@GLIBC_2.29
+      1    0.0%    0.0%  brk@@GLIBC_2.2.5
+      1    0.0%    0.0%  __madvise@@GLIBC_PRIVATE
+
+ [Summary]:
+   ticks  total  nonlib   name
+   1736   12.5%   58.5%  JavaScript
+   1042    7.5%   35.1%  C++
+    821    5.9%   27.6%  GC
+  10948   78.7%          Shared libraries
+    192    1.4%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+    612   62.4%    4.4%  __libc_malloc@@GLIBC_2.2.5
+    366   37.3%    2.6%  cfree@GLIBC_2.2.5
+      1    0.1%    0.0%  brk@@GLIBC_2.2.5
+      1    0.1%    0.0%  __munmap@@GLIBC_PRIVATE
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+  10471   75.2%  /home/agent-loop/.agent-loop/instances/agent-309/tools/deno
+   5526   52.8%    Builtin: GeneratorPrototypeNext
+   4221   40.3%    /home/agent-loop/.agent-loop/instances/agent-309/tools/deno
+   4204   99.6%      Builtin: ObjectAssign
+   4198   99.9%        Builtin: GeneratorPrototypeNext
+
+    624    4.5%  __libc_malloc@@GLIBC_2.2.5
+    611   97.9%    Builtin: GeneratorPrototypeNext
+
+    583    4.2%  Builtin: CreateShallowObjectLiteral
+    371   63.6%    Builtin: GeneratorPrototypeNext
+    182   31.2%    Builtin: CEntry_Return1_ArgvOnStack_NoBuiltinExit
+    182  100.0%      Builtin: ObjectAssign
+    182  100.0%        Builtin: GeneratorPrototypeNext
+     28    4.8%    JS: *get ext:deno_webidl/00_webidl.js:755:14
+     28  100.0%      Builtin: CEntry_Return1_ArgvOnStack_NoBuiltinExit
+     28  100.0%        Builtin: ObjectAssign
+     28  100.0%          Builtin: GeneratorPrototypeNext
+
+    475    3.4%  /usr/lib/x86_64-linux-gnu/libc.so.6
+    418   88.0%    Builtin: GeneratorPrototypeNext
+
+    371    2.7%  cfree@GLIBC_2.2.5
+    366   98.7%    Builtin: GeneratorPrototypeNext
+
+    333    2.4%  Builtin: LoadIC
+    214   64.3%    Builtin: GeneratorPrototypeNext
+    106   31.8%    JS: *get ext:deno_webidl/00_webidl.js:755:14
+    106  100.0%      Builtin: CEntry_Return1_ArgvOnStack_NoBuiltinExit
+    106  100.0%        Builtin: ObjectAssign
+    106  100.0%          Builtin: GeneratorPrototypeNext
+     12    3.6%    Builtin: CEntry_Return1_ArgvOnStack_NoBuiltinExit
+     12  100.0%      Builtin: ObjectAssign
+     12  100.0%        Builtin: GeneratorPrototypeNext
+
+    267    1.9%  JS: *get ext:deno_webidl/00_webidl.js:755:14
+    267  100.0%    Builtin: CEntry_Return1_ArgvOnStack_NoBuiltinExit
+    267  100.0%      Builtin: ObjectAssign
+    267  100.0%        Builtin: GeneratorPrototypeNext
+
+    192    1.4%  UNKNOWN
+    132   68.8%    Builtin: GeneratorPrototypeNext
+     47   24.5%    JS: *get ext:deno_webidl/00_webidl.js:755:14
+     47  100.0%      Builtin: CEntry_Return1_ArgvOnStack_NoBuiltinExit
+     47  100.0%        Builtin: ObjectAssign
+     47  100.0%          Builtin: GeneratorPrototypeNext
+
