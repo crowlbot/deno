@@ -1,0 +1,13 @@
+{"name":"rs_construct_empty","iters":50000,"ms":"294.50","ns_per_op":"5889.9"}
+{"name":"rs_construct_one_chunk","iters":50000,"ms":"341.37","ns_per_op":"6827.3"}
+{"name":"ts_construct","iters":50000,"ms":"1244.68","ns_per_op":"24893.5"}
+{"name":"rs_read_256x4k","iters":200,"ms":"49.20","ns_per_op":"246009.4"}
+{"name":"rs_pipethrough_identity_256x4k","iters":200,"ms":"377.19","ns_per_op":"1885965.5"}
+{"name":"rs_pipethrough_copy_256x4k","iters":200,"ms":"484.83","ns_per_op":"2424174.0"}
+{"name":"rs_pipeto_sink_256x4k","iters":200,"ms":"217.01","ns_per_op":"1085029.5"}
+Warning: Detected unsettled top-level await at file:///home/agent-loop/.agent-loop/instances/agent-309/streams-wt/tools/perf_research/streams/micro/streams_micro.js:136
+await asyncBench("rs_byob_read_256x4k", async () => {
+^
+
+
+
