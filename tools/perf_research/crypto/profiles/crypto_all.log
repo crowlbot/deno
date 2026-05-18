@@ -1,0 +1,56 @@
+=== deno run -A --no-prompt ===
+{"name":"getrandom_16","iters":200000,"ms":"26.90","ns_per_op":"134.5"}
+{"name":"getrandom_32","iters":200000,"ms":"32.76","ns_per_op":"163.8"}
+{"name":"getrandom_16k","iters":20000,"ms":"205.89","ns_per_op":"10294.5"}
+{"name":"randomUUID","iters":200000,"ms":"59.39","ns_per_op":"297.0"}
+{"name":"digest_sha256_short","iters":20000,"ms":"739.32","ns_per_op":"36966.1"}
+{"name":"digest_sha256_64k","iters":2000,"ms":"572.45","ns_per_op":"286223.9"}
+{"name":"digest_sha1_short","iters":20000,"ms":"610.54","ns_per_op":"30526.8"}
+{"name":"import_hmac_raw","iters":2000,"ms":"34.96","ns_per_op":"17479.3"}
+{"name":"hmac_sign_reused","iters":20000,"ms":"901.11","ns_per_op":"45055.4"}
+{"name":"hmac_verify_reused","iters":20000,"ms":"898.44","ns_per_op":"44921.8"}
+{"name":"aes_gcm_encrypt_256","iters":20000,"ms":"1057.83","ns_per_op":"52891.5"}
+{"name":"aes_gcm_decrypt_256","iters":20000,"ms":"1056.61","ns_per_op":"52830.3"}
+{"name":"pbkdf2_sha256_10k","iters":100,"ms":"645.83","ns_per_op":"6458332.1"}
+=== node-v22.13.1-linux-x64/bin/node ===
+{"name":"getrandom_16","iters":200000,"ms":"1170.57","ns_per_op":"5852.8"}
+{"name":"getrandom_32","iters":200000,"ms":"1184.77","ns_per_op":"5923.9"}
+{"name":"getrandom_16k","iters":20000,"ms":"220.49","ns_per_op":"11024.5"}
+{"name":"randomUUID","iters":200000,"ms":"51.12","ns_per_op":"255.6"}
+{"name":"digest_sha256_short","iters":20000,"ms":"849.48","ns_per_op":"42473.9"}
+{"name":"digest_sha256_64k","iters":2000,"ms":"483.81","ns_per_op":"241903.1"}
+{"name":"digest_sha1_short","iters":20000,"ms":"830.73","ns_per_op":"41536.3"}
+{"name":"import_hmac_raw","iters":2000,"ms":"70.90","ns_per_op":"35450.9"}
+{"name":"hmac_sign_reused","iters":20000,"ms":"891.57","ns_per_op":"44578.3"}
+{"name":"hmac_verify_reused","iters":20000,"ms":"902.80","ns_per_op":"45140.2"}
+{"name":"aes_gcm_encrypt_256","iters":20000,"ms":"1136.98","ns_per_op":"56849.2"}
+{"name":"aes_gcm_decrypt_256","iters":20000,"ms":"1174.96","ns_per_op":"58747.8"}
+{"name":"pbkdf2_sha256_10k","iters":100,"ms":"1068.50","ns_per_op":"10685035.5"}
+=== node-v23.7.0-linux-x64/bin/node ===
+{"name":"getrandom_16","iters":200000,"ms":"1052.79","ns_per_op":"5264.0"}
+{"name":"getrandom_32","iters":200000,"ms":"1129.60","ns_per_op":"5648.0"}
+{"name":"getrandom_16k","iters":20000,"ms":"199.55","ns_per_op":"9977.4"}
+{"name":"randomUUID","iters":200000,"ms":"51.65","ns_per_op":"258.3"}
+{"name":"digest_sha256_short","iters":20000,"ms":"812.56","ns_per_op":"40628.1"}
+{"name":"digest_sha256_64k","iters":2000,"ms":"463.65","ns_per_op":"231826.1"}
+{"name":"digest_sha1_short","iters":20000,"ms":"736.91","ns_per_op":"36845.6"}
+{"name":"import_hmac_raw","iters":2000,"ms":"66.39","ns_per_op":"33193.8"}
+{"name":"hmac_sign_reused","iters":20000,"ms":"904.15","ns_per_op":"45207.6"}
+{"name":"hmac_verify_reused","iters":20000,"ms":"900.56","ns_per_op":"45027.8"}
+{"name":"aes_gcm_encrypt_256","iters":20000,"ms":"981.95","ns_per_op":"49097.4"}
+{"name":"aes_gcm_decrypt_256","iters":20000,"ms":"1038.24","ns_per_op":"51912.2"}
+{"name":"pbkdf2_sha256_10k","iters":100,"ms":"1061.78","ns_per_op":"10617826.3"}
+=== bun-linux-x64/bun ===
+{"name":"getrandom_16","iters":200000,"ms":"15.43","ns_per_op":"77.2"}
+{"name":"getrandom_32","iters":200000,"ms":"16.16","ns_per_op":"80.8"}
+{"name":"getrandom_16k","iters":20000,"ms":"114.87","ns_per_op":"5743.4"}
+{"name":"randomUUID","iters":200000,"ms":"40.03","ns_per_op":"200.2"}
+{"name":"digest_sha256_short","iters":20000,"ms":"95.15","ns_per_op":"4757.4"}
+{"name":"digest_sha256_64k","iters":2000,"ms":"531.96","ns_per_op":"265980.8"}
+{"name":"digest_sha1_short","iters":20000,"ms":"77.26","ns_per_op":"3863.0"}
+{"name":"import_hmac_raw","iters":2000,"ms":"7.39","ns_per_op":"3694.4"}
+{"name":"hmac_sign_reused","iters":20000,"ms":"661.13","ns_per_op":"33056.5"}
+{"name":"hmac_verify_reused","iters":20000,"ms":"660.90","ns_per_op":"33044.9"}
+{"name":"aes_gcm_encrypt_256","iters":20000,"ms":"652.73","ns_per_op":"32636.5"}
+{"name":"aes_gcm_decrypt_256","iters":20000,"ms":"834.85","ns_per_op":"41742.5"}
+{"name":"pbkdf2_sha256_10k","iters":100,"ms":"680.67","ns_per_op":"6806746.2"}
