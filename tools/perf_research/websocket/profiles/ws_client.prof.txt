@@ -1,0 +1,178 @@
+Testing v8 version different from logging version
+Statistical profiling result from v8.log, (543 ticks, 65 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+    229   42.2%          /home/agent-loop/.agent-loop/instances/agent-309/tools/deno
+    127   23.4%          /usr/lib/x86_64-linux-gnu/libc.so.6
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+     11    2.0%    5.9%  Builtin: LoadIC
+      7    1.3%    3.7%  Builtin: ArrayPrototypePush
+      6    1.1%    3.2%  Builtin: ObjectPrototypeIsPrototypeOf
+      5    0.9%    2.7%  Builtin: CallFunction_ReceiverIsAny
+      4    0.7%    2.1%  JS: *ws.onmessage file:///home/agent-loop/.agent-loop/instances/agent-309/ws-wt/tools/perf_research/websocket/micro/ws_client.js:20:20
+      3    0.6%    1.6%  Builtin: CallApiCallbackOptimizedNoProfiling
+      3    0.6%    1.6%  Builtin: AsyncFunctionAwaitResolveClosure
+      2    0.4%    1.1%  JS: +ws.onmessage file:///home/agent-loop/.agent-loop/instances/agent-309/ws-wt/tools/perf_research/websocket/micro/ws_client.js:20:20
+      2    0.4%    1.1%  JS: *wrappedHandler ext:deno_web/02_event.js:1414:26
+      2    0.4%    1.1%  Builtin: ResumeGeneratorTrampoline
+      2    0.4%    1.1%  Builtin: PerformPromiseThen
+      2    0.4%    1.1%  Builtin: KeyedLoadICTrampoline_Megamorphic
+      2    0.4%    1.1%  Builtin: CreateShallowObjectLiteral
+      2    0.4%    1.1%  Builtin: CallFunction_ReceiverIsNullOrUndefined
+      2    0.4%    1.1%  Builtin: ArrayIncludes
+      1    0.2%    0.5%  JS: ~ws.onopen file:///home/agent-loop/.agent-loop/instances/agent-309/ws-wt/tools/perf_research/websocket/micro/ws_client.js:16:17
+      1    0.2%    0.5%  JS: ^<anonymous> ext:deno_websocket/01_websocket.js:507:21
+      1    0.2%    0.5%  JS: +async_op_2 ext:core/00_infra.js:243:33
+      1    0.2%    0.5%  Builtin: TypedArrayPrototypeBuffer
+      1    0.2%    0.5%  Builtin: ToBoolean
+      1    0.2%    0.5%  Builtin: StringPrototypeToWellFormed
+      1    0.2%    0.5%  Builtin: StringPrototypeEndsWith
+      1    0.2%    0.5%  Builtin: RunMicrotasks
+      1    0.2%    0.5%  Builtin: PromiseResolve
+      1    0.2%    0.5%  Builtin: PromiseFulfillReactionJob
+      1    0.2%    0.5%  Builtin: NewStrictArgumentsElements
+      1    0.2%    0.5%  Builtin: LoadICGenericBaseline
+      1    0.2%    0.5%  Builtin: KeyedLoadIC_Megamorphic
+      1    0.2%    0.5%  Builtin: InterpreterEntryTrampoline
+      1    0.2%    0.5%  Builtin: FunctionPrototypeCall
+      1    0.2%    0.5%  Builtin: FastNewObject
+      1    0.2%    0.5%  Builtin: CallBoundFunction
+      1    0.2%    0.5%  Builtin: CEntry_Return1_ArgvOnStack_BuiltinExit
+      1    0.2%    0.5%  Builtin: BaselineLeaveFrame
+      1    0.2%    0.5%  Builtin: AsyncFunctionAwait
+
+ [C++]:
+   ticks  total  nonlib   name
+     13    2.4%    7.0%  __libc_malloc@@GLIBC_2.2.5
+     12    2.2%    6.4%  __recv@@GLIBC_PRIVATE
+      5    0.9%    2.7%  __lll_lock_wake_private@@GLIBC_PRIVATE
+      5    0.9%    2.7%  __lll_lock_wait_private@@GLIBC_PRIVATE
+      4    0.7%    2.1%  syscall@@GLIBC_2.2.5
+      2    0.4%    1.1%  cfree@GLIBC_2.2.5
+      2    0.4%    1.1%  brk@@GLIBC_2.2.5
+      1    0.2%    0.5%  exp2@@GLIBC_2.29
+      1    0.2%    0.5%  __libc_realloc@@GLIBC_2.2.5
+      1    0.2%    0.5%  __getpid@@GLIBC_2.2.5
+      1    0.2%    0.5%  __clock_gettime@@GLIBC_PRIVATE
+
+ [Summary]:
+   ticks  total  nonlib   name
+     75   13.8%   40.1%  JavaScript
+     47    8.7%   25.1%  C++
+     39    7.2%   20.9%  GC
+    356   65.6%          Shared libraries
+     65   12.0%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+     13   31.0%    2.4%  __libc_malloc@@GLIBC_2.2.5
+     12   28.6%    2.2%  __recv@@GLIBC_PRIVATE
+      5   11.9%    0.9%  __lll_lock_wake_private@@GLIBC_PRIVATE
+      5   11.9%    0.9%  __lll_lock_wait_private@@GLIBC_PRIVATE
+      2    4.8%    0.4%  cfree@GLIBC_2.2.5
+      2    4.8%    0.4%  brk@@GLIBC_2.2.5
+      1    2.4%    0.2%  syscall@@GLIBC_2.2.5
+      1    2.4%    0.2%  __libc_realloc@@GLIBC_2.2.5
+      1    2.4%    0.2%  __clock_gettime@@GLIBC_PRIVATE
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+    229   42.2%  /home/agent-loop/.agent-loop/instances/agent-309/tools/deno
+     81   35.4%    Builtin: AsyncFunctionAwaitResolveClosure
+     56   24.5%    JS: ^wrappedHandler ext:deno_web/02_event.js:1414:26
+     56  100.0%      JS: ^innerInvokeEventListeners ext:deno_web/02_event.js:708:35
+     56  100.0%        JS: ^invokeEventListeners ext:deno_web/02_event.js:800:30
+     56  100.0%          JS: ^dispatch ext:deno_web/02_event.js:537:18
+     15    6.6%    /home/agent-loop/.agent-loop/instances/agent-309/tools/deno
+      4   26.7%      Builtin: AsyncFunctionAwaitResolveClosure
+      2   13.3%      JS: ~ws.onopen file:///home/agent-loop/.agent-loop/instances/agent-309/ws-wt/tools/perf_research/websocket/micro/ws_client.js:16:17
+      2   13.3%      JS: *wrappedHandler ext:deno_web/02_event.js:1414:26
+      1    6.7%      JS: ^wrappedHandler ext:deno_web/02_event.js:1414:26
+      1  100.0%        JS: ^innerInvokeEventListeners ext:deno_web/02_event.js:708:35
+      1  100.0%          JS: ^invokeEventListeners ext:deno_web/02_event.js:800:30
+      1  100.0%            JS: ^dispatch ext:deno_web/02_event.js:537:18
+      1    6.7%      JS: ^<anonymous> ext:deno_websocket/01_websocket.js:507:21
+      1  100.0%        Builtin: AsyncFunctionAwaitResolveClosure
+      1    6.7%      JS: ^<anonymous> ext:core/00_infra.js:139:33
+      1  100.0%        Builtin: PromiseConstructor
+      1  100.0%          JS: +async_op_2 ext:core/00_infra.js:243:33
+      1  100.0%            Builtin: AsyncFunctionAwaitResolveClosure
+      1    6.7%      Builtin: StringPrototypeToWellFormed
+      1  100.0%        JS: ^wrappedHandler ext:deno_web/02_event.js:1414:26
+      1  100.0%          JS: ^innerInvokeEventListeners ext:deno_web/02_event.js:708:35
+      1  100.0%            JS: ^invokeEventListeners ext:deno_web/02_event.js:800:30
+      1    6.7%      Builtin: PromiseConstructor
+      1  100.0%        JS: ~once file:///home/agent-loop/.agent-loop/instances/agent-309/ws-wt/tools/perf_research/websocket/micro/ws_client.js:8:14
+      1  100.0%          Script: ~<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-309/ws-wt/tools/perf_research/websocket/micro/ws_client.js:1:1
+      1  100.0%            Builtin: AsyncModuleEvaluate
+     12    5.2%    JS: +async_op_2 ext:core/00_infra.js:243:33
+     10   83.3%      Builtin: AsyncFunctionAwaitResolveClosure
+      2   16.7%      JS: ^<anonymous> ext:deno_websocket/01_websocket.js:507:21
+      2  100.0%        Builtin: AsyncFunctionAwaitResolveClosure
+     10    4.4%    JS: *wrappedHandler ext:deno_web/02_event.js:1414:26
+      5    2.2%    JS: +ws.onopen file:///home/agent-loop/.agent-loop/instances/agent-309/ws-wt/tools/perf_research/websocket/micro/ws_client.js:16:17
+      5  100.0%      JS: *wrappedHandler ext:deno_web/02_event.js:1414:26
+      4    1.7%    JS: *async_op_2 ext:core/00_infra.js:243:33
+      4  100.0%      Builtin: AsyncFunctionAwaitResolveClosure
+
+    127   23.4%  /usr/lib/x86_64-linux-gnu/libc.so.6
+     38   29.9%    Builtin: AsyncFunctionAwaitResolveClosure
+     29   22.8%    JS: *wrappedHandler ext:deno_web/02_event.js:1414:26
+     26   20.5%    JS: +ws.onopen file:///home/agent-loop/.agent-loop/instances/agent-309/ws-wt/tools/perf_research/websocket/micro/ws_client.js:16:17
+     26  100.0%      JS: *wrappedHandler ext:deno_web/02_event.js:1414:26
+     14   11.0%    JS: *ws.onopen file:///home/agent-loop/.agent-loop/instances/agent-309/ws-wt/tools/perf_research/websocket/micro/ws_client.js:16:17
+     14  100.0%      JS: *wrappedHandler ext:deno_web/02_event.js:1414:26
+      3    2.4%    JS: ^wrappedHandler ext:deno_web/02_event.js:1414:26
+      3  100.0%      JS: ^innerInvokeEventListeners ext:deno_web/02_event.js:708:35
+      3  100.0%        JS: ^invokeEventListeners ext:deno_web/02_event.js:800:30
+      3  100.0%          JS: ^dispatch ext:deno_web/02_event.js:537:18
+      3    2.4%    /home/agent-loop/.agent-loop/instances/agent-309/tools/deno
+      1   33.3%      JS: ^dispatch ext:deno_web/02_event.js:537:18
+      1  100.0%        JS: ^<anonymous> ext:deno_websocket/01_websocket.js:507:21
+      1  100.0%          Builtin: AsyncFunctionAwaitResolveClosure
+      1   33.3%      JS: ^__eventLoopTick ext:core/01_core.js:458:27
+      1   33.3%      Builtin: AsyncFunctionAwaitResolveClosure
+
+     65   12.0%  UNKNOWN
+     55   84.6%    Builtin: AsyncFunctionAwaitResolveClosure
+      5    7.7%    JS: *wrappedHandler ext:deno_web/02_event.js:1414:26
+      2    3.1%    JS: ^<anonymous> ext:deno_websocket/01_websocket.js:507:21
+      2  100.0%      Builtin: AsyncFunctionAwaitResolveClosure
+      1    1.5%    JS: ^wrappedHandler ext:deno_web/02_event.js:1414:26
+      1  100.0%      JS: ^innerInvokeEventListeners ext:deno_web/02_event.js:708:35
+      1  100.0%        JS: ^invokeEventListeners ext:deno_web/02_event.js:800:30
+      1  100.0%          JS: ^dispatch ext:deno_web/02_event.js:537:18
+
+     13    2.4%  __libc_malloc@@GLIBC_2.2.5
+      9   69.2%    Builtin: AsyncFunctionAwaitResolveClosure
+      2   15.4%    JS: +ws.onopen file:///home/agent-loop/.agent-loop/instances/agent-309/ws-wt/tools/perf_research/websocket/micro/ws_client.js:16:17
+      2  100.0%      JS: *wrappedHandler ext:deno_web/02_event.js:1414:26
+      2   15.4%    JS: *wrappedHandler ext:deno_web/02_event.js:1414:26
+
+     12    2.2%  __recv@@GLIBC_PRIVATE
+     10   83.3%    Builtin: AsyncFunctionAwaitResolveClosure
+      1    8.3%    JS: +async_op_2 ext:core/00_infra.js:243:33
+      1  100.0%      Builtin: AsyncFunctionAwaitResolveClosure
+      1    8.3%    JS: *async_op_2 ext:core/00_infra.js:243:33
+      1  100.0%      Builtin: AsyncFunctionAwaitResolveClosure
+
+     11    2.0%  Builtin: LoadIC
+      8   72.7%    Builtin: AsyncFunctionAwaitResolveClosure
+      3   27.3%    JS: *wrappedHandler ext:deno_web/02_event.js:1414:26
+
+      7    1.3%  Builtin: ArrayPrototypePush
+      6   85.7%    Builtin: AsyncFunctionAwaitResolveClosure
+      1   14.3%    JS: ^dispatch ext:deno_web/02_event.js:537:18
+      1  100.0%      JS: ^<anonymous> ext:deno_websocket/01_websocket.js:507:21
+      1  100.0%        Builtin: AsyncFunctionAwaitResolveClosure
+
+      6    1.1%  Builtin: ObjectPrototypeIsPrototypeOf
+      6  100.0%    JS: *wrappedHandler ext:deno_web/02_event.js:1414:26
+

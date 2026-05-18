@@ -1,0 +1,36 @@
+=== Deno-server, all clients ===
+
+=== Deno client ===
+{"name":"warmup","count":200,"ms":"48.38","us_per_op":"241.90","msgs_per_s":"4134"}
+{"name":"client_text_11","count":50000,"ms":"449.93","us_per_op":"9.00","msgs_per_s":"111128"}
+{"name":"client_bin_32","count":50000,"ms":"492.86","us_per_op":"9.86","msgs_per_s":"101448"}
+{"name":"client_bin_4k","count":10000,"ms":"204.55","us_per_op":"20.46","msgs_per_s":"48887"}
+{"name":"client_bin_64k","count":500,"ms":"72.18","us_per_op":"144.37","msgs_per_s":"6927"}
+
+=== Node 22.13.1 client ===
+{"name":"warmup","count":200,"ms":"55.37","us_per_op":"276.85","msgs_per_s":"3612"}
+{"name":"client_text_11","count":50000,"ms":"612.40","us_per_op":"12.25","msgs_per_s":"81646"}
+{"name":"client_bin_32","count":50000,"ms":"705.97","us_per_op":"14.12","msgs_per_s":"70825"}
+{"name":"client_bin_4k","count":10000,"ms":"889.86","us_per_op":"88.99","msgs_per_s":"11238"}
+{"name":"client_bin_64k","count":500,"ms":"468.74","us_per_op":"937.48","msgs_per_s":"1067"}
+
+=== Node 23.7.0 client ===
+{"name":"warmup","count":200,"ms":"48.35","us_per_op":"241.77","msgs_per_s":"4136"}
+{"name":"client_text_11","count":50000,"ms":"750.80","us_per_op":"15.02","msgs_per_s":"66595"}
+{"name":"client_bin_32","count":50000,"ms":"514.18","us_per_op":"10.28","msgs_per_s":"97242"}
+{"name":"client_bin_4k","count":10000,"ms":"840.89","us_per_op":"84.09","msgs_per_s":"11892"}
+{"name":"client_bin_64k","count":500,"ms":"467.07","us_per_op":"934.13","msgs_per_s":"1071"}
+
+=== Bun 1.1.43 client ===
+{"name":"warmup","count":200,"ms":"42.03","us_per_op":"210.16","msgs_per_s":"4758"}
+{"name":"client_text_11","count":50000,"ms":"326.45","us_per_op":"6.53","msgs_per_s":"153162"}
+{"name":"client_bin_32","count":50000,"ms":"450.81","us_per_op":"9.02","msgs_per_s":"110911"}
+{"name":"client_bin_4k","count":10000,"ms":"252.68","us_per_op":"25.27","msgs_per_s":"39576"}
+{"name":"client_bin_64k","count":500,"ms":"159.36","us_per_op":"318.71","msgs_per_s":"3138"}
+
+=== Bun-server, Deno client (server cross-check) ===
+{"name":"warmup","count":200,"ms":"4.44","us_per_op":"22.18","msgs_per_s":"45091"}
+{"name":"client_text_11","count":50000,"ms":"367.06","us_per_op":"7.34","msgs_per_s":"136218"}
+{"name":"client_bin_32","count":50000,"ms":"403.69","us_per_op":"8.07","msgs_per_s":"123858"}
+{"name":"client_bin_4k","count":10000,"ms":"158.56","us_per_op":"15.86","msgs_per_s":"63068"}
+{"name":"client_bin_64k","count":500,"ms":"67.86","us_per_op":"135.72","msgs_per_s":"7368"}
