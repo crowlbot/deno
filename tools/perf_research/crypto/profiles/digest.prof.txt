@@ -1,0 +1,165 @@
+Testing v8 version different from logging version
+Statistical profiling result from v8.log, (2539 ticks, 131 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+    795   31.3%          /home/agent-loop/.agent-loop/instances/agent-309/tools/deno
+    114    4.5%          /usr/lib/x86_64-linux-gnu/libc.so.6
+      7    0.3%          [vdso]
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+     36    1.4%    2.2%  Builtin: CreateTypedArray
+     32    1.3%    2.0%  Builtin: GetProperty
+     28    1.1%    1.7%  Builtin: CreateShallowObjectLiteral
+     27    1.1%    1.7%  Builtin: LoadIC
+     19    0.7%    1.2%  Builtin: CEntry_Return1_ArgvOnStack_NoBuiltinExit
+     17    0.7%    1.0%  Builtin: TypedArrayPrototypeSlice
+     14    0.6%    0.9%  Builtin: RunMicrotasks
+     13    0.5%    0.8%  Builtin: ObjectPrototypeHasOwnProperty
+     13    0.5%    0.8%  Builtin: CallFunction_ReceiverIsAny
+     12    0.5%    0.7%  Builtin: FulfillPromise
+     12    0.5%    0.7%  Builtin: EnqueueMicrotask
+     11    0.4%    0.7%  Builtin: ResumeGeneratorTrampoline
+     11    0.4%    0.7%  Builtin: AsyncFunctionAwaitResolveClosure
+      8    0.3%    0.5%  Builtin: CEntry_Return1_ArgvOnStack_BuiltinExit
+      7    0.3%    0.4%  Builtin: ResolvePromise
+      7    0.3%    0.4%  Builtin: RecordWriteIgnoreFP
+      7    0.3%    0.4%  Builtin: ForInEnumerate
+      7    0.3%    0.4%  Builtin: Call_ReceiverIsAny
+      6    0.2%    0.4%  JS: *async_op_2 ext:core/00_infra.js:243:33
+      6    0.2%    0.4%  Builtin: KeyedStoreIC
+      5    0.2%    0.3%  Builtin: PromiseFulfillReactionJob
+      5    0.2%    0.3%  Builtin: LoadICTrampoline
+      5    0.2%    0.3%  Builtin: JSEntry
+      5    0.2%    0.3%  Builtin: CallFunction_ReceiverIsNullOrUndefined
+      5    0.2%    0.3%  Builtin: CallFunction_ReceiverIsNotNullOrUndefined
+      4    0.2%    0.2%  Builtin: ObjectHasOwn
+      4    0.2%    0.2%  Builtin: Construct
+      3    0.1%    0.2%  Builtin: TypedArrayPrototypeByteOffset
+      3    0.1%    0.2%  Builtin: FunctionPrototypeCall
+      3    0.1%    0.2%  Builtin: Call_ReceiverIsNotNullOrUndefined
+      3    0.1%    0.2%  Builtin: CallFunctionTemplate_Generic
+      3    0.1%    0.2%  Builtin: ArrayBufferConstructor
+      3    0.1%    0.2%  Builtin: AdaptorWithBuiltinExitFrame1
+      2    0.1%    0.1%  Script: ~<anonymous> file:///tmp/digest_hot.js:1:1
+      2    0.1%    0.1%  JS: +<anonymous> ext:deno_webidl/00_webidl.js:770:19
+      2    0.1%    0.1%  Builtin: StringAdd_CheckNone
+      2    0.1%    0.1%  Builtin: PromiseCapabilityDefaultResolve
+      2    0.1%    0.1%  Builtin: HandleApiCallOrConstruct
+      2    0.1%    0.1%  Builtin: ConstructFunction
+      2    0.1%    0.1%  Builtin: Call_ReceiverIsNullOrUndefined
+      2    0.1%    0.1%  Builtin: CallApiCallbackOptimizedNoProfiling
+      2    0.1%    0.1%  Builtin: CallApiCallbackGeneric
+      1    0.0%    0.1%  JS: ^digest ext:deno_crypto/00_crypto.js:570:15
+      1    0.0%    0.1%  JS: +async_op_2 ext:core/00_infra.js:243:33
+      1    0.0%    0.1%  Builtin: TypedArrayPrototypeByteLength
+      1    0.0%    0.1%  Builtin: PromisePrototypeThen
+      1    0.0%    0.1%  Builtin: PromiseConstructor
+      1    0.0%    0.1%  Builtin: ObjectPrototypeIsPrototypeOf
+      1    0.0%    0.1%  Builtin: JSEntryTrampoline
+      1    0.0%    0.1%  Builtin: JSBuiltinsConstructStub
+      1    0.0%    0.1%  Builtin: InterpreterEntryTrampoline
+      1    0.0%    0.1%  Builtin: AsyncFunctionEnter
+      1    0.0%    0.1%  Builtin: ArrayBufferIsView
+
+ [C++]:
+   ticks  total  nonlib   name
+   1071   42.2%   66.0%  syscall@@GLIBC_2.2.5
+     21    0.8%    1.3%  __libc_malloc@@GLIBC_2.2.5
+     13    0.5%    0.8%  calloc@@GLIBC_2.2.5
+      4    0.2%    0.2%  posix_memalign@@GLIBC_2.2.5
+      3    0.1%    0.2%  cfree@GLIBC_2.2.5
+      3    0.1%    0.2%  __getpid@@GLIBC_2.2.5
+      2    0.1%    0.1%  __madvise@@GLIBC_PRIVATE
+      1    0.0%    0.1%  exp2@@GLIBC_2.29
+      1    0.0%    0.1%  __mmap@@GLIBC_PRIVATE
+
+ [Summary]:
+   ticks  total  nonlib   name
+    373   14.7%   23.0%  JavaScript
+   1119   44.1%   68.9%  C++
+    154    6.1%    9.5%  GC
+    916   36.1%          Shared libraries
+    131    5.2%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+   1062   97.1%   41.8%  syscall@@GLIBC_2.2.5
+     14    1.3%    0.6%  __libc_malloc@@GLIBC_2.2.5
+     13    1.2%    0.5%  calloc@@GLIBC_2.2.5
+      4    0.4%    0.2%  posix_memalign@@GLIBC_2.2.5
+      1    0.1%    0.0%  cfree@GLIBC_2.2.5
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   1071   42.2%  syscall@@GLIBC_2.2.5
+    982   91.7%    JS: *async_op_2 ext:core/00_infra.js:243:33
+    982  100.0%      Builtin: AsyncFunctionAwaitResolveClosure
+     77    7.2%    JS: +async_op_2 ext:core/00_infra.js:243:33
+     71   92.2%      Builtin: AsyncFunctionAwaitResolveClosure
+      6    7.8%      Script: ~<anonymous> file:///tmp/digest_hot.js:1:1
+      6  100.0%        Builtin: AsyncFunctionAwaitResolveClosure
+
+    795   31.3%  /home/agent-loop/.agent-loop/instances/agent-309/tools/deno
+    259   32.6%    /home/agent-loop/.agent-loop/instances/agent-309/tools/deno
+    128   49.4%      Builtin: TypedArrayPrototypeSlice
+    127   99.2%        Builtin: AsyncFunctionAwaitResolveClosure
+    119   45.9%      Builtin: AsyncFunctionAwaitResolveClosure
+      4    1.5%      Script: ~<anonymous> file:///tmp/digest_hot.js:1:1
+      4  100.0%        Builtin: AsyncFunctionAwaitResolveClosure
+    160   20.1%    JS: *async_op_2 ext:core/00_infra.js:243:33
+    160  100.0%      Builtin: AsyncFunctionAwaitResolveClosure
+     17    2.1%    Builtin: AsyncFunctionAwaitResolveClosure
+     15    1.9%    JS: +async_op_2 ext:core/00_infra.js:243:33
+     14   93.3%      Builtin: AsyncFunctionAwaitResolveClosure
+      1    6.7%      Script: ~<anonymous> file:///tmp/digest_hot.js:1:1
+      1  100.0%        Builtin: AsyncFunctionAwaitResolveClosure
+
+    131    5.2%  UNKNOWN
+    103   78.6%    Builtin: AsyncFunctionAwaitResolveClosure
+
+    114    4.5%  /usr/lib/x86_64-linux-gnu/libc.so.6
+     65   57.0%    /home/agent-loop/.agent-loop/instances/agent-309/tools/deno
+     63   96.9%      Builtin: TypedArrayPrototypeSlice
+     63  100.0%        Builtin: AsyncFunctionAwaitResolveClosure
+      1    1.5%      Script: ~<anonymous> file:///tmp/digest_hot.js:1:1
+      1  100.0%        Builtin: AsyncFunctionAwaitResolveClosure
+      1    1.5%      JS: +<anonymous> ext:deno_webidl/00_webidl.js:770:19
+      1  100.0%        Builtin: AsyncFunctionAwaitResolveClosure
+     13   11.4%    JS: *async_op_2 ext:core/00_infra.js:243:33
+     13  100.0%      Builtin: AsyncFunctionAwaitResolveClosure
+      6    5.3%    Builtin: TypedArrayPrototypeSlice
+      6  100.0%      Builtin: AsyncFunctionAwaitResolveClosure
+      2    1.8%    JS: +async_op_2 ext:core/00_infra.js:243:33
+      2  100.0%      Builtin: AsyncFunctionAwaitResolveClosure
+
+     36    1.4%  Builtin: CreateTypedArray
+     16   44.4%    Builtin: TypedArrayPrototypeSlice
+     15   93.8%      Builtin: AsyncFunctionAwaitResolveClosure
+      1    6.3%      JS: ^copyBuffer ext:deno_crypto/00_crypto.js:328:20
+      1  100.0%        JS: ^digest ext:deno_crypto/00_crypto.js:570:15
+      1  100.0%          Script: ~<anonymous> file:///tmp/digest_hot.js:1:1
+      1  100.0%            Builtin: AsyncFunctionAwaitResolveClosure
+     16   44.4%    Builtin: AsyncFunctionAwaitResolveClosure
+      4   11.1%    Builtin: TypedArrayConstructor
+      4  100.0%      Builtin: AsyncFunctionAwaitResolveClosure
+
+     32    1.3%  Builtin: GetProperty
+     17   53.1%    Builtin: PromiseCapabilityDefaultResolve
+      1    5.9%      JS: ^__resolvePromise ext:core/00_infra.js:154:28
+      1  100.0%        JS: ^__eventLoopTick ext:core/01_core.js:458:27
+      3    9.4%    Builtin: AsyncFunctionAwaitResolveClosure
+
+     28    1.1%  Builtin: CreateShallowObjectLiteral
+     26   92.9%    Builtin: AsyncFunctionAwaitResolveClosure
+      2    7.1%    Script: ~<anonymous> file:///tmp/digest_hot.js:1:1
+      2  100.0%      Builtin: AsyncFunctionAwaitResolveClosure
+
+     27    1.1%  Builtin: LoadIC
+     27  100.0%    Builtin: AsyncFunctionAwaitResolveClosure
+
