@@ -1,0 +1,7 @@
+{"name":"rs_construct_empty","iters":50000,"ms":"112.96","ns_per_op":"2259.3"}
+{"name":"rs_construct_one_chunk","iters":50000,"ms":"177.32","ns_per_op":"3546.5"}
+{"name":"ts_construct","iters":50000,"ms":"474.60","ns_per_op":"9491.9"}
+{"name":"rs_read_256x4k","iters":200,"ms":"31.05","ns_per_op":"155233.7"}
+{"name":"rs_pipethrough_identity_256x4k","iters":200,"ms":"296.05","ns_per_op":"1480243.3"}
+{"name":"rs_pipethrough_copy_256x4k","iters":200,"ms":"540.80","ns_per_op":"2704001.8"}
+{"name":"rs_pipeto_sink_256x4k","iters":200,"ms":"153.91","ns_per_op":"769557.4"}

@@ -1,0 +1,11 @@
+{"name":"rs_construct_empty","iters":50000,"ms":"156.49","ns_per_op":"3129.8"}
+{"name":"rs_construct_one_chunk","iters":50000,"ms":"261.18","ns_per_op":"5223.5"}
+{"name":"ts_construct","iters":50000,"ms":"363.83","ns_per_op":"7276.6"}
+{"name":"rs_read_256x4k","iters":200,"ms":"34.73","ns_per_op":"173641.3"}
+{"name":"rs_pipethrough_identity_256x4k","iters":200,"ms":"219.37","ns_per_op":"1096835.4"}
+{"name":"rs_pipethrough_copy_256x4k","iters":200,"ms":"376.82","ns_per_op":"1884087.5"}
+{"name":"rs_pipeto_sink_256x4k","iters":200,"ms":"148.74","ns_per_op":"743679.7"}
+[0m[1m[31merror[0m: Top-level await promise never resolved
+await asyncBench("rs_byob_read_256x4k", async () => {
+[0m[31m^[0m
+    at [0m[1m[3m<anonymous>[0m ([0m[2m[38;5;245mfile:///home/agent-loop/.agent-loop/instances/agent-309/streams-wt/[0m[0m[36mtools/perf_research/streams/micro/streams_micro.js[0m:[0m[33m136[0m:[0m[33m1[0m)
