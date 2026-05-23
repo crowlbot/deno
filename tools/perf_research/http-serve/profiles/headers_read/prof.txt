@@ -1,0 +1,451 @@
+Testing v8 version different from logging version
+(node:1447213) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+Statistical profiling result from isolate-0x63698c695000-1447073-v8.log, (4195 ticks, 6 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+   2134   50.9%          /home/agent-loop/.agent-loop/instances/agent-320/repo/target/release/deno
+    145    3.5%          /usr/lib/x86_64-linux-gnu/libc.so.6
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+    145    3.5%    7.6%  JS: *<anonymous> ext:deno_webidl/00_webidl.js:1096:10
+    117    2.8%    6.1%  JS: *initializeAResponse ext:deno_fetch/23_response.js:176:29
+     88    2.1%    4.6%  JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+     83    2.0%    4.3%  JS: *mapped ext:deno_http/00_serve.ts:388:32
+     80    1.9%    4.2%  Builtin: StringToLowerCaseIntl
+     63    1.5%    3.3%  JS: *<anonymous> ext:deno_fetch/20_headers.js:225:25
+     55    1.3%    2.9%  JS: *get headers ext:deno_fetch/23_request.js:489:14
+     50    1.2%    2.6%  Builtin: CreateShallowObjectLiteral
+     49    1.2%    2.6%  Builtin: KeyedLoadIC_Megamorphic
+     48    1.1%    2.5%  Builtin: ArrayPrototypePush
+     47    1.1%    2.5%  Builtin: LoadIC
+     47    1.1%    2.5%  Builtin: ArrayPowerSort
+     44    1.0%    2.3%  JS: *Response ext:deno_fetch/23_response.js:314:14
+     43    1.0%    2.2%  Builtin: GetProperty
+     36    0.9%    1.9%  Builtin: ArrayPrototypeSort
+     35    0.8%    1.8%  Builtin: KeyedStoreIC_Megamorphic
+     34    0.8%    1.8%  Builtin: JSConstructStubGeneric
+     33    0.8%    1.7%  Builtin: AsyncFunctionAwait
+     28    0.7%    1.5%  Builtin: CallApiCallbackOptimizedNoProfiling
+     27    0.6%    1.4%  JS: *createDefaultIterator ext:deno_webidl/00_webidl.js:1286:33
+     26    0.6%    1.4%  Builtin: CallFunction_ReceiverIsAny
+     25    0.6%    1.3%  Builtin: LoadGlobalIC
+     25    0.6%    1.3%  Builtin: KeyedStoreIC
+     20    0.5%    1.0%  Builtin: RunMicrotasks
+     20    0.5%    1.0%  Builtin: GrowFastSmiOrObjectElements
+     20    0.5%    1.0%  Builtin: CallFunction_ReceiverIsNullOrUndefined
+     16    0.4%    0.8%  JS: *get ext:deno_fetch/22_body.js:290:10
+     16    0.4%    0.8%  Builtin: KeyedLoadIC
+     16    0.4%    0.8%  Builtin: CreateObjectWithoutProperties
+     15    0.4%    0.8%  Builtin: FastNewObject
+     15    0.4%    0.8%  Builtin: EnqueueMicrotask
+     14    0.3%    0.7%  Builtin: StringLessThan
+     14    0.3%    0.7%  Builtin: StringEqual
+     14    0.3%    0.7%  Builtin: ResolvePromise
+     13    0.3%    0.7%  JS: +Request ext:deno_fetch/23_request.js:319:14
+     13    0.3%    0.7%  JS: *extractBody ext:deno_fetch/22_body.js:445:21
+     13    0.3%    0.7%  Builtin: PromisePrototypeThen
+     13    0.3%    0.7%  Builtin: ObjectPrototypeHasOwnProperty
+     13    0.3%    0.7%  Builtin: JSEntry
+     12    0.3%    0.6%  Builtin: KeyedLoadIC_PolymorphicName
+     11    0.3%    0.6%  Builtin: LoadGlobalICTrampoline
+     11    0.3%    0.6%  Builtin: ForInFilter
+     11    0.3%    0.6%  Builtin: CEntry_Return1_ArgvOnStack_NoBuiltinExit
+     10    0.2%    0.5%  JS: *dispatch ext:deno_http/00_serve.ts:752:22
+     10    0.2%    0.5%  Builtin: KeyedLoadICTrampoline_Megamorphic
+     10    0.2%    0.5%  Builtin: DefineNamedOwnICTrampoline
+     10    0.2%    0.5%  Builtin: DefineNamedOwnIC
+     10    0.2%    0.5%  Builtin: CreateObjectFromSlowBoilerplateHelper
+      9    0.2%    0.5%  JS: *<anonymous> ext:runtime/98_global_scope_shared.js:180:5
+      9    0.2%    0.5%  Builtin: Call_ReceiverIsNullOrUndefined
+      8    0.2%    0.4%  JS: +webidl.converters.BodyInit_DOMString ext:deno_fetch/22_body.js:561:43
+      8    0.2%    0.4%  JS: *requiredArguments ext:deno_webidl/00_webidl.js:714:27
+      8    0.2%    0.4%  Builtin: Store_FastObjectElements_0
+      8    0.2%    0.4%  Builtin: ResumeGeneratorTrampoline
+      8    0.2%    0.4%  Builtin: FunctionPrototypeCall
+      8    0.2%    0.4%  Builtin: FulfillPromise
+      8    0.2%    0.4%  Builtin: ForInEnumerate
+      8    0.2%    0.4%  Builtin: CreateObjectFromSlowBoilerplate
+      8    0.2%    0.4%  Builtin: AsyncFunctionAwaitResolveClosure
+      7    0.2%    0.4%  JS: +mapped ext:deno_http/00_serve.ts:388:32
+      7    0.2%    0.4%  JS: *<anonymous> ext:deno_webidl/00_webidl.js:431:25
+      7    0.2%    0.4%  JS: *<anonymous> ext:deno_fetch/20_headers.js:270:7
+      7    0.2%    0.4%  Builtin: ToObject
+      7    0.2%    0.4%  Builtin: StringPrototypeCharCodeAt
+      7    0.2%    0.4%  Builtin: SortCompareUserFn
+      7    0.2%    0.4%  Builtin: ObjectPrototypeIsPrototypeOf
+      7    0.2%    0.4%  Builtin: ObjectHasOwn
+      7    0.2%    0.4%  Builtin: ObjectCreate
+      7    0.2%    0.4%  Builtin: CanUseSameAccessor_FastObjectElements_0
+      7    0.2%    0.4%  Builtin: Call_ReceiverIsAny
+      6    0.1%    0.3%  Builtin: PromiseFulfillReactionJob
+      5    0.1%    0.3%  Builtin: KeyedStoreICTrampoline_Megamorphic
+      5    0.1%    0.3%  Builtin: KeyedStoreICTrampoline
+      5    0.1%    0.3%  Builtin: AsyncAwaitNonThenableFastPath
+      4    0.1%    0.2%  JS: *Request ext:deno_fetch/23_request.js:319:14
+      4    0.1%    0.2%  Builtin: LoadICTrampoline
+      3    0.1%    0.2%  JS: +fastSyncResponseOrStream ext:deno_http/00_serve.ts:338:36
+      3    0.1%    0.2%  JS: +dispatch ext:deno_http/00_serve.ts:752:22
+      3    0.1%    0.2%  JS: +appendHeader ext:deno_fetch/20_headers.js:123:22
+      3    0.1%    0.2%  JS: +<anonymous> ext:deno_fetch/20_headers.js:225:25
+      3    0.1%    0.2%  JS: *get ext:core/01_core.js:873:10
+      3    0.1%    0.2%  Builtin: Typeof
+      3    0.1%    0.2%  Builtin: StringPrototypeToLowerCaseIntl
+      3    0.1%    0.2%  Builtin: StrictEqual_Generic_Baseline
+      3    0.1%    0.2%  Builtin: JSEntryTrampoline
+      3    0.1%    0.2%  Builtin: CallBoundFunction
+      3    0.1%    0.2%  Builtin: BaselineOutOfLinePrologue
+      2    0.0%    0.1%  JS: +webidl.converters.ResponseInit_fast ext:deno_fetch/23_response.js:476:47
+      2    0.0%    0.1%  JS: +get headers ext:deno_fetch/23_request.js:489:14
+      2    0.0%    0.1%  JS: +get ext:deno_fetch/22_body.js:290:10
+      2    0.0%    0.1%  JS: +fromInnerRequest ext:deno_fetch/23_request.js:617:26
+      2    0.0%    0.1%  JS: +createDefaultIterator ext:deno_webidl/00_webidl.js:1286:33
+      2    0.0%    0.1%  JS: +Headers ext:deno_fetch/20_headers.js:285:14
+      2    0.0%    0.1%  JS: +<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+      2    0.0%    0.1%  JS: +<anonymous> ext:deno_webidl/00_webidl.js:431:25
+      2    0.0%    0.1%  JS: *next ext:deno_webidl/00_webidl.js:1230:9
+      2    0.0%    0.1%  JS: *fillHeaders ext:deno_fetch/20_headers.js:63:21
+      2    0.0%    0.1%  Builtin: FastNewStrictArguments
+      2    0.0%    0.1%  Builtin: CEntry_Return1_ArgvOnStack_BuiltinExit
+      2    0.0%    0.1%  Builtin: AdaptorWithBuiltinExitFrame3
+      1    0.0%    0.1%  JS: ~Request ext:deno_fetch/23_request.js:319:14
+      1    0.0%    0.1%  JS: ~<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+      1    0.0%    0.1%  JS: ^Request ext:deno_fetch/23_request.js:319:14
+      1    0.0%    0.1%  JS: +initializeAResponse ext:deno_fetch/23_response.js:176:29
+      1    0.0%    0.1%  JS: +getHeader ext:deno_fetch/20_headers.js:157:19
+      1    0.0%    0.1%  JS: +get ext:deno_fetch/20_headers.js:348:6
+      1    0.0%    0.1%  JS: +Response ext:deno_fetch/23_response.js:314:14
+      1    0.0%    0.1%  JS: +InnerRequest ext:deno_http/00_serve.ts:74:16
+      1    0.0%    0.1%  JS: +<anonymous> ext:runtime/98_global_scope_shared.js:180:5
+      1    0.0%    0.1%  Builtin: StoreIC
+      1    0.0%    0.1%  Builtin: GreaterThanOrEqual_Generic_Baseline
+      1    0.0%    0.1%  Builtin: ForInNext
+      1    0.0%    0.1%  Builtin: Call_ReceiverIsNullOrUndefined_Baseline_Compact
+      1    0.0%    0.1%  Builtin: Call_ReceiverIsNotNullOrUndefined
+
+ [C++]:
+   ticks  total  nonlib   name
+     33    0.8%    1.7%  __libc_malloc@@GLIBC_2.2.5
+     22    0.5%    1.1%  cfree@GLIBC_2.2.5
+     14    0.3%    0.7%  syscall@@GLIBC_2.2.5
+      4    0.1%    0.2%  __munmap@@GLIBC_PRIVATE
+
+ [Summary]:
+   ticks  total  nonlib   name
+   1837   43.8%   95.9%  JavaScript
+     73    1.7%    3.8%  C++
+     83    2.0%    4.3%  GC
+   2279   54.3%          Shared libraries
+      6    0.1%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+     33   57.9%    0.8%  __libc_malloc@@GLIBC_2.2.5
+     22   38.6%    0.5%  cfree@GLIBC_2.2.5
+      2    3.5%    0.0%  syscall@@GLIBC_2.2.5
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   2134   50.9%  /home/agent-loop/.agent-loop/instances/agent-320/repo/target/release/deno
+    967   45.3%    /home/agent-loop/.agent-loop/instances/agent-320/repo/target/release/deno
+    583   60.3%      JS: *createDefaultIterator ext:deno_webidl/00_webidl.js:1286:33
+    583  100.0%        JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+    583  100.0%          JS: *mapped ext:deno_http/00_serve.ts:388:32
+    583  100.0%            JS: *dispatch ext:deno_http/00_serve.ts:752:22
+    167   17.3%      JS: *initializeAResponse ext:deno_fetch/23_response.js:176:29
+    167  100.0%        JS: *Response ext:deno_fetch/23_response.js:314:14
+    167  100.0%          JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+    167  100.0%            JS: *mapped ext:deno_http/00_serve.ts:388:32
+    131   13.5%      JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+    130   99.2%        JS: *mapped ext:deno_http/00_serve.ts:388:32
+    130  100.0%          JS: *dispatch ext:deno_http/00_serve.ts:752:22
+     30    3.1%      JS: +<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+     30  100.0%        JS: +mapped ext:deno_http/00_serve.ts:388:32
+     30  100.0%          JS: +dispatch ext:deno_http/00_serve.ts:752:22
+     24    2.5%      JS: +createDefaultIterator ext:deno_webidl/00_webidl.js:1286:33
+     24  100.0%        JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+     18   75.0%          JS: *mapped ext:deno_http/00_serve.ts:388:32
+     18  100.0%            JS: *dispatch ext:deno_http/00_serve.ts:752:22
+      6   25.0%          JS: +mapped ext:deno_http/00_serve.ts:388:32
+      6  100.0%            JS: +dispatch ext:deno_http/00_serve.ts:752:22
+    383   17.9%    JS: *mapped ext:deno_http/00_serve.ts:388:32
+    383  100.0%      Builtin: AsyncFunctionAwaitResolveClosure
+    259   12.1%    JS: *get headers ext:deno_fetch/23_request.js:489:14
+    252   97.3%      JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+    247   98.0%        JS: *mapped ext:deno_http/00_serve.ts:388:32
+    247  100.0%          JS: *dispatch ext:deno_http/00_serve.ts:752:22
+      5    2.0%        JS: +mapped ext:deno_http/00_serve.ts:388:32
+      4   80.0%          JS: +dispatch ext:deno_http/00_serve.ts:752:22
+      1   20.0%          JS: *dispatch ext:deno_http/00_serve.ts:752:22
+      7    2.7%      JS: +<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+      7  100.0%        JS: +mapped ext:deno_http/00_serve.ts:388:32
+      7  100.0%          JS: +dispatch ext:deno_http/00_serve.ts:752:22
+    148    6.9%    JS: *<anonymous> ext:deno_fetch/20_headers.js:225:25
+    148  100.0%      JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+    148  100.0%        JS: *mapped ext:deno_http/00_serve.ts:388:32
+    148  100.0%          JS: *dispatch ext:deno_http/00_serve.ts:752:22
+     31    1.5%    JS: *Response ext:deno_fetch/23_response.js:314:14
+     31  100.0%      JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+     31  100.0%        JS: *mapped ext:deno_http/00_serve.ts:388:32
+     31  100.0%          JS: *dispatch ext:deno_http/00_serve.ts:752:22
+     22    1.0%    JS: *<anonymous> ext:deno_webidl/00_webidl.js:1096:10
+     22  100.0%      JS: *Response ext:deno_fetch/23_response.js:314:14
+     22  100.0%        JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+     22  100.0%          JS: *mapped ext:deno_http/00_serve.ts:388:32
+     22  100.0%            JS: *dispatch ext:deno_http/00_serve.ts:752:22
+
+    145    3.5%  JS: *<anonymous> ext:deno_webidl/00_webidl.js:1096:10
+    143   98.6%    JS: *Response ext:deno_fetch/23_response.js:314:14
+    143  100.0%      JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+    143  100.0%        JS: *mapped ext:deno_http/00_serve.ts:388:32
+    143  100.0%          JS: *dispatch ext:deno_http/00_serve.ts:752:22
+      2    1.4%    JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+      2  100.0%      JS: *mapped ext:deno_http/00_serve.ts:388:32
+      2  100.0%        JS: *dispatch ext:deno_http/00_serve.ts:752:22
+
+    145    3.5%  /usr/lib/x86_64-linux-gnu/libc.so.6
+     43   29.7%    /home/agent-loop/.agent-loop/instances/agent-320/repo/target/release/deno
+     22   51.2%      JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+     22  100.0%        JS: *mapped ext:deno_http/00_serve.ts:388:32
+     22  100.0%          JS: *dispatch ext:deno_http/00_serve.ts:752:22
+     12   27.9%      JS: *createDefaultIterator ext:deno_webidl/00_webidl.js:1286:33
+     12  100.0%        JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+     12  100.0%          JS: *mapped ext:deno_http/00_serve.ts:388:32
+     12  100.0%            JS: *dispatch ext:deno_http/00_serve.ts:752:22
+      5   11.6%      JS: *initializeAResponse ext:deno_fetch/23_response.js:176:29
+      5  100.0%        JS: *Response ext:deno_fetch/23_response.js:314:14
+      5  100.0%          JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+      5  100.0%            JS: *mapped ext:deno_http/00_serve.ts:388:32
+      2    4.7%      JS: +<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+      2  100.0%        JS: +mapped ext:deno_http/00_serve.ts:388:32
+      2  100.0%          JS: +dispatch ext:deno_http/00_serve.ts:752:22
+      1    2.3%      JS: ^extractBody ext:deno_fetch/22_body.js:445:21
+      1  100.0%        JS: ^Response ext:deno_fetch/23_response.js:314:14
+      1  100.0%          JS: +<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+      1  100.0%            JS: ^mapped ext:deno_http/00_serve.ts:388:32
+      1    2.3%      JS: +createDefaultIterator ext:deno_webidl/00_webidl.js:1286:33
+      1  100.0%        JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+      1  100.0%          JS: +mapped ext:deno_http/00_serve.ts:388:32
+      1  100.0%            JS: +dispatch ext:deno_http/00_serve.ts:752:22
+     42   29.0%    JS: *mapped ext:deno_http/00_serve.ts:388:32
+     42  100.0%      Builtin: AsyncFunctionAwaitResolveClosure
+     35   24.1%    JS: *get headers ext:deno_fetch/23_request.js:489:14
+     35  100.0%      JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+     35  100.0%        JS: *mapped ext:deno_http/00_serve.ts:388:32
+     35  100.0%          JS: *dispatch ext:deno_http/00_serve.ts:752:22
+     12    8.3%    Builtin: ArrayPrototypeSort
+     12  100.0%      JS: *<anonymous> ext:deno_fetch/20_headers.js:225:25
+     12  100.0%        JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+     12  100.0%          JS: *mapped ext:deno_http/00_serve.ts:388:32
+     12  100.0%            JS: *dispatch ext:deno_http/00_serve.ts:752:22
+
+    117    2.8%  JS: *initializeAResponse ext:deno_fetch/23_response.js:176:29
+    114   97.4%    JS: *Response ext:deno_fetch/23_response.js:314:14
+    114  100.0%      JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+    114  100.0%        JS: *mapped ext:deno_http/00_serve.ts:388:32
+    114  100.0%          JS: *dispatch ext:deno_http/00_serve.ts:752:22
+      3    2.6%    JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+      3  100.0%      JS: *mapped ext:deno_http/00_serve.ts:388:32
+      3  100.0%        JS: *dispatch ext:deno_http/00_serve.ts:752:22
+
+     88    2.1%  JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+     77   87.5%    JS: *mapped ext:deno_http/00_serve.ts:388:32
+     77  100.0%      JS: *dispatch ext:deno_http/00_serve.ts:752:22
+      8    9.1%    JS: *dispatch ext:deno_http/00_serve.ts:752:22
+      2    2.3%    JS: +mapped ext:deno_http/00_serve.ts:388:32
+      2  100.0%      JS: +dispatch ext:deno_http/00_serve.ts:752:22
+      1    1.1%    JS: +dispatch ext:deno_http/00_serve.ts:752:22
+
+     83    2.0%  JS: *mapped ext:deno_http/00_serve.ts:388:32
+     38   45.8%    Builtin: AsyncFunctionAwaitResolveClosure
+     37   44.6%    JS: *dispatch ext:deno_http/00_serve.ts:752:22
+
+     80    1.9%  Builtin: StringToLowerCaseIntl
+     38   47.5%    JS: *mapped ext:deno_http/00_serve.ts:388:32
+     38  100.0%      JS: *dispatch ext:deno_http/00_serve.ts:752:22
+     20   25.0%    JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+     20  100.0%      JS: *mapped ext:deno_http/00_serve.ts:388:32
+     20  100.0%        JS: *dispatch ext:deno_http/00_serve.ts:752:22
+     18   22.5%    JS: *Response ext:deno_fetch/23_response.js:314:14
+     18  100.0%      JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+     18  100.0%        JS: *mapped ext:deno_http/00_serve.ts:388:32
+     18  100.0%          JS: *dispatch ext:deno_http/00_serve.ts:752:22
+      2    2.5%    JS: +getHeader ext:deno_fetch/20_headers.js:157:19
+      2  100.0%      JS: +get ext:deno_fetch/20_headers.js:348:6
+      2  100.0%        JS: +<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+      2  100.0%          JS: +mapped ext:deno_http/00_serve.ts:388:32
+      2  100.0%            JS: +dispatch ext:deno_http/00_serve.ts:752:22
+      2    2.5%    JS: +<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+      2  100.0%      JS: +mapped ext:deno_http/00_serve.ts:388:32
+      2  100.0%        JS: +dispatch ext:deno_http/00_serve.ts:752:22
+
+     63    1.5%  JS: *<anonymous> ext:deno_fetch/20_headers.js:225:25
+     53   84.1%    JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+     53  100.0%      JS: *mapped ext:deno_http/00_serve.ts:388:32
+     53  100.0%        JS: *dispatch ext:deno_http/00_serve.ts:752:22
+     10   15.9%    JS: *mapped ext:deno_http/00_serve.ts:388:32
+     10  100.0%      JS: *dispatch ext:deno_http/00_serve.ts:752:22
+
+     55    1.3%  JS: *get headers ext:deno_fetch/23_request.js:489:14
+     42   76.4%    JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+     41   97.6%      JS: *mapped ext:deno_http/00_serve.ts:388:32
+     41  100.0%        JS: *dispatch ext:deno_http/00_serve.ts:752:22
+      1    2.4%      JS: +mapped ext:deno_http/00_serve.ts:388:32
+      1  100.0%        JS: +dispatch ext:deno_http/00_serve.ts:752:22
+     12   21.8%    JS: *mapped ext:deno_http/00_serve.ts:388:32
+     12  100.0%      JS: *dispatch ext:deno_http/00_serve.ts:752:22
+      1    1.8%    JS: +mapped ext:deno_http/00_serve.ts:388:32
+      1  100.0%      JS: +dispatch ext:deno_http/00_serve.ts:752:22
+
+     50    1.2%  Builtin: CreateShallowObjectLiteral
+     28   56.0%    JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+     28  100.0%      JS: *mapped ext:deno_http/00_serve.ts:388:32
+     28  100.0%        JS: *dispatch ext:deno_http/00_serve.ts:752:22
+     15   30.0%    JS: *Response ext:deno_fetch/23_response.js:314:14
+     15  100.0%      JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+     15  100.0%        JS: *mapped ext:deno_http/00_serve.ts:388:32
+     15  100.0%          JS: *dispatch ext:deno_http/00_serve.ts:752:22
+      3    6.0%    JS: *<anonymous> ext:deno_webidl/00_webidl.js:1096:10
+      3  100.0%      JS: *Response ext:deno_fetch/23_response.js:314:14
+      3  100.0%        JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+      3  100.0%          JS: *mapped ext:deno_http/00_serve.ts:388:32
+      3  100.0%            JS: *dispatch ext:deno_http/00_serve.ts:752:22
+      1    2.0%    JS: +next ext:deno_webidl/00_webidl.js:1230:9
+      1  100.0%      JS: +<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+      1  100.0%        JS: +mapped ext:deno_http/00_serve.ts:388:32
+      1  100.0%          JS: +dispatch ext:deno_http/00_serve.ts:752:22
+      1    2.0%    JS: +<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+      1  100.0%      JS: +mapped ext:deno_http/00_serve.ts:388:32
+      1  100.0%        JS: +dispatch ext:deno_http/00_serve.ts:752:22
+      1    2.0%    JS: +<anonymous> ext:deno_fetch/20_headers.js:464:36
+      1  100.0%      JS: +webidl.converters.ResponseInit_fast ext:deno_fetch/23_response.js:476:47
+      1  100.0%        JS: +Response ext:deno_fetch/23_response.js:314:14
+      1  100.0%          JS: +<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+      1  100.0%            JS: +mapped ext:deno_http/00_serve.ts:388:32
+      1    2.0%    JS: *<anonymous> ext:deno_fetch/20_headers.js:225:25
+      1  100.0%      JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+      1  100.0%        JS: *mapped ext:deno_http/00_serve.ts:388:32
+      1  100.0%          JS: *dispatch ext:deno_http/00_serve.ts:752:22
+
+     49    1.2%  Builtin: KeyedLoadIC_Megamorphic
+     16   32.7%    JS: *<anonymous> ext:deno_fetch/20_headers.js:225:25
+     16  100.0%      JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+     16  100.0%        JS: *mapped ext:deno_http/00_serve.ts:388:32
+     16  100.0%          JS: *dispatch ext:deno_http/00_serve.ts:752:22
+     15   30.6%    JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+     14   93.3%      JS: *mapped ext:deno_http/00_serve.ts:388:32
+     14  100.0%        JS: *dispatch ext:deno_http/00_serve.ts:752:22
+      1    6.7%      JS: +mapped ext:deno_http/00_serve.ts:388:32
+      1  100.0%        JS: +dispatch ext:deno_http/00_serve.ts:752:22
+      8   16.3%    JS: *mapped ext:deno_http/00_serve.ts:388:32
+      8  100.0%      JS: *dispatch ext:deno_http/00_serve.ts:752:22
+      5   10.2%    JS: *Response ext:deno_fetch/23_response.js:314:14
+      5  100.0%      JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+      5  100.0%        JS: *mapped ext:deno_http/00_serve.ts:388:32
+      5  100.0%          JS: *dispatch ext:deno_http/00_serve.ts:752:22
+      2    4.1%    JS: +<anonymous> ext:deno_fetch/20_headers.js:225:25
+      1   50.0%      JS: +next ext:deno_webidl/00_webidl.js:1230:9
+      1  100.0%        JS: +<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+      1  100.0%          JS: +mapped ext:deno_http/00_serve.ts:388:32
+      1  100.0%            JS: +dispatch ext:deno_http/00_serve.ts:752:22
+      1   50.0%      JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+      1  100.0%        JS: +mapped ext:deno_http/00_serve.ts:388:32
+      1  100.0%          JS: +dispatch ext:deno_http/00_serve.ts:752:22
+      1    2.0%    JS: ^next ext:deno_webidl/00_webidl.js:1230:9
+      1  100.0%      JS: ^<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+      1  100.0%        JS: ^mapped ext:deno_http/00_serve.ts:388:32
+      1  100.0%          JS: ^mapped ext:deno_http/00_serve.ts:499:24
+      1  100.0%            JS: ^dispatch ext:deno_http/00_serve.ts:752:22
+      1    2.0%    JS: +initializeAResponse ext:deno_fetch/23_response.js:176:29
+      1  100.0%      JS: +Response ext:deno_fetch/23_response.js:314:14
+      1  100.0%        JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+      1  100.0%          JS: +mapped ext:deno_http/00_serve.ts:388:32
+      1  100.0%            JS: +dispatch ext:deno_http/00_serve.ts:752:22
+      1    2.0%    JS: *initializeAResponse ext:deno_fetch/23_response.js:176:29
+      1  100.0%      JS: *Response ext:deno_fetch/23_response.js:314:14
+      1  100.0%        JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+      1  100.0%          JS: *mapped ext:deno_http/00_serve.ts:388:32
+      1  100.0%            JS: *dispatch ext:deno_http/00_serve.ts:752:22
+
+     48    1.1%  Builtin: ArrayPrototypePush
+     35   72.9%    JS: *get headers ext:deno_fetch/23_request.js:489:14
+     34   97.1%      JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+     33   97.1%        JS: *mapped ext:deno_http/00_serve.ts:388:32
+     33  100.0%          JS: *dispatch ext:deno_http/00_serve.ts:752:22
+      1    2.9%        JS: +mapped ext:deno_http/00_serve.ts:388:32
+      1  100.0%          JS: +dispatch ext:deno_http/00_serve.ts:752:22
+      1    2.9%      JS: +<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+      1  100.0%        JS: +mapped ext:deno_http/00_serve.ts:388:32
+      1  100.0%          JS: +dispatch ext:deno_http/00_serve.ts:752:22
+      9   18.8%    JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+      9  100.0%      JS: *mapped ext:deno_http/00_serve.ts:388:32
+      9  100.0%        JS: *dispatch ext:deno_http/00_serve.ts:752:22
+      2    4.2%    JS: +get headerList ext:deno_http/00_serve.ts:264:19
+      2  100.0%      JS: +request.<computed> ext:deno_fetch/23_request.js:620:26
+      2  100.0%        JS: +<anonymous> ext:deno_fetch/23_request.js:264:17
+      2  100.0%          JS: +get headers ext:deno_fetch/23_request.js:489:14
+      2  100.0%            JS: +<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+      1    2.1%    JS: +next ext:deno_webidl/00_webidl.js:1230:9
+      1  100.0%      JS: +<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+      1  100.0%        JS: ^mapped ext:deno_http/00_serve.ts:388:32
+      1  100.0%          JS: +dispatch ext:deno_http/00_serve.ts:752:22
+      1    2.1%    JS: +<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+      1  100.0%      JS: +mapped ext:deno_http/00_serve.ts:388:32
+      1  100.0%        JS: +dispatch ext:deno_http/00_serve.ts:752:22
+
+     47    1.1%  Builtin: LoadIC
+     16   34.0%    JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+     16  100.0%      JS: *mapped ext:deno_http/00_serve.ts:388:32
+     16  100.0%        JS: *dispatch ext:deno_http/00_serve.ts:752:22
+     13   27.7%    JS: *mapped ext:deno_http/00_serve.ts:388:32
+     13  100.0%      JS: *dispatch ext:deno_http/00_serve.ts:752:22
+     10   21.3%    JS: *<anonymous> ext:deno_webidl/00_webidl.js:1096:10
+     10  100.0%      JS: *Response ext:deno_fetch/23_response.js:314:14
+     10  100.0%        JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+     10  100.0%          JS: *mapped ext:deno_http/00_serve.ts:388:32
+     10  100.0%            JS: *dispatch ext:deno_http/00_serve.ts:752:22
+      6   12.8%    JS: *Response ext:deno_fetch/23_response.js:314:14
+      6  100.0%      JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+      6  100.0%        JS: *mapped ext:deno_http/00_serve.ts:388:32
+      6  100.0%          JS: *dispatch ext:deno_http/00_serve.ts:752:22
+      1    2.1%    JS: +get ext:deno_fetch/20_headers.js:348:6
+      1  100.0%      JS: +<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+      1  100.0%        JS: +mapped ext:deno_http/00_serve.ts:388:32
+      1  100.0%          JS: +dispatch ext:deno_http/00_serve.ts:752:22
+      1    2.1%    JS: +Response ext:deno_fetch/23_response.js:314:14
+      1  100.0%      JS: +<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+      1  100.0%        JS: +mapped ext:deno_http/00_serve.ts:388:32
+      1  100.0%          JS: +dispatch ext:deno_http/00_serve.ts:752:22
+
+     47    1.1%  Builtin: ArrayPowerSort
+     38   80.9%    Builtin: ArrayPrototypeSort
+     37   97.4%      JS: *<anonymous> ext:deno_fetch/20_headers.js:225:25
+     37  100.0%        JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+     37  100.0%          JS: *mapped ext:deno_http/00_serve.ts:388:32
+     37  100.0%            JS: *dispatch ext:deno_http/00_serve.ts:752:22
+      1    2.6%      JS: +<anonymous> ext:deno_fetch/20_headers.js:225:25
+      1  100.0%        JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+      1  100.0%          JS: +mapped ext:deno_http/00_serve.ts:388:32
+      1  100.0%            JS: +dispatch ext:deno_http/00_serve.ts:752:22
+      9   19.1%    JS: *<anonymous> ext:deno_fetch/20_headers.js:225:25
+      9  100.0%      JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+      9  100.0%        JS: *mapped ext:deno_http/00_serve.ts:388:32
+      9  100.0%          JS: *dispatch ext:deno_http/00_serve.ts:752:22
+
+     44    1.0%  JS: *Response ext:deno_fetch/23_response.js:314:14
+     44  100.0%    JS: *<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/headers_read.js:7:28
+     44  100.0%      JS: *mapped ext:deno_http/00_serve.ts:388:32
+     44  100.0%        JS: *dispatch ext:deno_http/00_serve.ts:752:22
+
+     43    1.0%  Builtin: GetProperty
+     41   95.3%    JS: *mapped ext:deno_http/00_serve.ts:388:32
+     41  100.0%      JS: *dispatch ext:deno_http/00_serve.ts:752:22
+      2    4.7%    JS: +mapped ext:deno_http/00_serve.ts:388:32
+      2  100.0%      JS: +dispatch ext:deno_http/00_serve.ts:752:22
+
