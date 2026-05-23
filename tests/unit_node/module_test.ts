@@ -6,6 +6,11 @@ import {
   findSourceMap,
   isBuiltin,
   Module,
+  // @ts-ignore Our internal @types/node is at v18.16.19 which predates
+  // this change. Updating it is difficult due to different types in Node
+  // for `import.meta.filename` and `import.meta.dirname` that Deno
+  // provides.
+  register,
 } from "node:module";
 import { assert, assertEquals, assertThrows } from "@std/assert";
 import process from "node:process";
@@ -98,6 +103,25 @@ Deno.test("[node/module builtinModules] has 'module' in builtins", () => {
 // https://github.com/denoland/deno/issues/18666
 Deno.test("[node/module findSourceMap] is a function", () => {
   assertEquals(findSourceMap("foo"), undefined);
+});
+
+// https://github.com/denoland/deno/issues/24902
+Deno.test("[node/module register] is a function", () => {
+  assertEquals(register("foo"), undefined);
+});
+
+// Regression test: tsx and other tools probe `Module.register` (the default
+// export of `node:module`) to decide whether the host supports module loader
+// hooks. Make sure both `Module.register` and `Module.registerHooks` are
+// attached as static methods so `import M from "node:module"; M.register`
+// resolves to the stub instead of `undefined`.
+Deno.test("[node/module] Module.register and Module.registerHooks are exposed", () => {
+  // @ts-ignore Not in our bundled @types/node yet.
+  assertEquals(typeof Module.register, "function");
+  // @ts-ignore Not in our bundled @types/node yet.
+  assertEquals(typeof Module.registerHooks, "function");
+  // @ts-ignore Stub returns undefined.
+  assertEquals(Module.register("foo"), undefined);
 });
 
 Deno.test("[node/module] overriding Module._compile is possible and Node globals work", () => {

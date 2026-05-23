@@ -1,0 +1,318 @@
+Testing v8 version different from logging version
+(node:1447170) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+Statistical profiling result from isolate-0x5dc0a9573000-1446861-v8.log, (2296 ticks, 2 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+   1035   45.1%          /home/agent-loop/.agent-loop/instances/agent-320/repo/target/release/deno
+     52    2.3%          /usr/lib/x86_64-linux-gnu/libc.so.6
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+    146    6.4%   12.1%  JS: *<anonymous> ext:deno_webidl/00_webidl.js:1096:10
+    120    5.2%    9.9%  JS: *initializeAResponse ext:deno_fetch/23_response.js:176:29
+     99    4.3%    8.2%  JS: *mapped ext:deno_http/00_serve.ts:388:32
+     50    2.2%    4.1%  JS: *Response ext:deno_fetch/23_response.js:314:14
+     38    1.7%    3.1%  Builtin: CreateShallowObjectLiteral
+     35    1.5%    2.9%  Builtin: AsyncFunctionAwait
+     34    1.5%    2.8%  Builtin: LoadIC
+     33    1.4%    2.7%  Builtin: RunMicrotasks
+     32    1.4%    2.6%  Builtin: JSConstructStubGeneric
+     31    1.4%    2.6%  Builtin: StringToLowerCaseIntl
+     29    1.3%    2.4%  Builtin: GetProperty
+     27    1.2%    2.2%  Builtin: LoadGlobalIC
+     26    1.1%    2.2%  Builtin: KeyedStoreIC
+     23    1.0%    1.9%  Builtin: CallFunction_ReceiverIsAny
+     22    1.0%    1.8%  Builtin: KeyedLoadIC_PolymorphicName
+     21    0.9%    1.7%  Builtin: EnqueueMicrotask
+     20    0.9%    1.7%  JS: *extractBody ext:deno_fetch/22_body.js:445:21
+     19    0.8%    1.6%  Builtin: ObjectPrototypeHasOwnProperty
+     17    0.7%    1.4%  Builtin: ForInFilter
+     15    0.7%    1.2%  Builtin: CallApiCallbackOptimizedNoProfiling
+     14    0.6%    1.2%  JS: *get ext:deno_fetch/22_body.js:290:10
+     14    0.6%    1.2%  JS: *get ext:core/01_core.js:873:10
+     14    0.6%    1.2%  Builtin: FulfillPromise
+     13    0.6%    1.1%  Builtin: ObjectPrototypeIsPrototypeOf
+     13    0.6%    1.1%  Builtin: GrowFastSmiOrObjectElements
+     13    0.6%    1.1%  Builtin: CallFunction_ReceiverIsNullOrUndefined
+     12    0.5%    1.0%  Builtin: PromisePrototypeThen
+     12    0.5%    1.0%  Builtin: KeyedLoadIC
+     12    0.5%    1.0%  Builtin: AsyncAwaitNonThenableFastPath
+     11    0.5%    0.9%  JS: +Request ext:deno_fetch/23_request.js:319:14
+     11    0.5%    0.9%  JS: *<anonymous> ext:runtime/98_global_scope_shared.js:180:5
+     11    0.5%    0.9%  Builtin: ResumeGeneratorTrampoline
+     10    0.4%    0.8%  JS: +webidl.converters.BodyInit_DOMString ext:deno_fetch/22_body.js:561:43
+     10    0.4%    0.8%  Builtin: ResolvePromise
+      9    0.4%    0.7%  Builtin: ForInEnumerate
+      8    0.3%    0.7%  Builtin: KeyedStoreICTrampoline
+      8    0.3%    0.7%  Builtin: JSRunMicrotasksEntry
+      8    0.3%    0.7%  Builtin: JSEntry
+      7    0.3%    0.6%  Builtin: ObjectHasOwn
+      7    0.3%    0.6%  Builtin: FastNewObject
+      6    0.3%    0.5%  Builtin: Call_ReceiverIsAny
+      5    0.2%    0.4%  Builtin: JsonStringify
+      5    0.2%    0.4%  Builtin: FunctionPrototypeCall
+      4    0.2%    0.3%  JS: +mapped ext:deno_http/00_serve.ts:388:32
+      4    0.2%    0.3%  JS: +fillHeaders ext:deno_fetch/20_headers.js:63:21
+      4    0.2%    0.3%  JS: +<anonymous> ext:deno_webidl/00_webidl.js:1096:10
+      4    0.2%    0.3%  JS: *dispatch ext:deno_http/00_serve.ts:752:22
+      4    0.2%    0.3%  JS: *<anonymous> ext:deno_webidl/00_webidl.js:431:25
+      4    0.2%    0.3%  Builtin: Typeof
+      4    0.2%    0.3%  Builtin: StringPrototypeCharCodeAt
+      4    0.2%    0.3%  Builtin: LoadICTrampoline
+      4    0.2%    0.3%  Builtin: CEntry_Return1_ArgvOnStack_NoBuiltinExit
+      3    0.1%    0.2%  JS: +InnerRequest ext:deno_http/00_serve.ts:74:16
+      3    0.1%    0.2%  Builtin: JSEntryTrampoline
+      3    0.1%    0.2%  Builtin: Call_ReceiverIsNullOrUndefined
+      3    0.1%    0.2%  Builtin: CEntry_Return1_ArgvOnStack_BuiltinExit
+      3    0.1%    0.2%  Builtin: AsyncFunctionAwaitResolveClosure
+      3    0.1%    0.2%  Builtin: ArrayPrototypePush
+      2    0.1%    0.2%  JS: ~close ext:deno_http/00_serve.ts:80:10
+      2    0.1%    0.2%  JS: +get type ext:deno_fetch/23_response.js:341:11
+      2    0.1%    0.2%  JS: +appendHeader ext:deno_fetch/20_headers.js:123:22
+      2    0.1%    0.2%  JS: +Response ext:deno_fetch/23_response.js:314:14
+      2    0.1%    0.2%  JS: *Request ext:deno_fetch/23_request.js:319:14
+      2    0.1%    0.2%  Builtin: PromiseFulfillReactionJob
+      2    0.1%    0.2%  Builtin: AdaptorWithBuiltinExitFrame3
+      1    0.0%    0.1%  JS: +get ext:core/01_core.js:873:10
+      1    0.0%    0.1%  JS: +close ext:deno_http/00_serve.ts:80:10
+      1    0.0%    0.1%  JS: +ServeHandlerInfo ext:deno_http/00_serve.ts:328:16
+      1    0.0%    0.1%  JS: +<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/json_tiny.js:8:28
+      1    0.0%    0.1%  JS: +<anonymous> ext:deno_webidl/00_webidl.js:431:25
+      1    0.0%    0.1%  JS: *fillHeaders ext:deno_fetch/20_headers.js:63:21
+      1    0.0%    0.1%  Builtin: StringPrototypeToLowerCaseIntl
+      1    0.0%    0.1%  Builtin: ObjectDefineProperties
+      1    0.0%    0.1%  Builtin: InterpreterPushArgsThenCall
+      1    0.0%    0.1%  Builtin: ForInNext
+      1    0.0%    0.1%  Builtin: FastNewStrictArguments
+      1    0.0%    0.1%  Builtin: FastNewClosure
+      1    0.0%    0.1%  Builtin: DefineNamedOwnICBaseline
+      1    0.0%    0.1%  Builtin: CallBoundFunction
+      1    0.0%    0.1%  Builtin: AllocateInYoungGeneration
+
+ [C++]:
+   ticks  total  nonlib   name
+     31    1.4%    2.6%  __libc_malloc@@GLIBC_2.2.5
+     11    0.5%    0.9%  cfree@GLIBC_2.2.5
+      5    0.2%    0.4%  syscall@@GLIBC_2.2.5
+      2    0.1%    0.2%  __mmap@@GLIBC_PRIVATE
+      2    0.1%    0.2%  __madvise@@GLIBC_PRIVATE
+      1    0.0%    0.1%  __munmap@@GLIBC_PRIVATE
+      1    0.0%    0.1%  __getpid@@GLIBC_2.2.5
+
+ [Summary]:
+   ticks  total  nonlib   name
+   1153   50.2%   95.4%  JavaScript
+     53    2.3%    4.4%  C++
+     89    3.9%    7.4%  GC
+   1087   47.3%          Shared libraries
+      2    0.1%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+     30   75.0%    1.3%  __libc_malloc@@GLIBC_2.2.5
+      9   22.5%    0.4%  cfree@GLIBC_2.2.5
+      1    2.5%    0.0%  __madvise@@GLIBC_PRIVATE
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   1035   45.1%  /home/agent-loop/.agent-loop/instances/agent-320/repo/target/release/deno
+    372   35.9%    /home/agent-loop/.agent-loop/instances/agent-320/repo/target/release/deno
+    176   47.3%      JS: *initializeAResponse ext:deno_fetch/23_response.js:176:29
+    176  100.0%        JS: *Response ext:deno_fetch/23_response.js:314:14
+    176  100.0%          JS: *mapped ext:deno_http/00_serve.ts:388:32
+    176  100.0%            JS: *dispatch ext:deno_http/00_serve.ts:752:22
+    159   42.7%      JS: *mapped ext:deno_http/00_serve.ts:388:32
+    159  100.0%        JS: *dispatch ext:deno_http/00_serve.ts:752:22
+     10    2.7%      JS: +fillHeaders ext:deno_fetch/20_headers.js:63:21
+     10  100.0%        JS: +initializeAResponse ext:deno_fetch/23_response.js:176:29
+     10  100.0%          JS: +Response ext:deno_fetch/23_response.js:314:14
+     10  100.0%            JS: +<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/json_tiny.js:8:28
+      9    2.4%      JS: +<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/json_tiny.js:8:28
+      9  100.0%        JS: +mapped ext:deno_http/00_serve.ts:388:32
+      9  100.0%          JS: +dispatch ext:deno_http/00_serve.ts:752:22
+      7    1.9%      JS: +fromInnerRequest ext:deno_fetch/23_request.js:617:26
+      7  100.0%        JS: +mapped ext:deno_http/00_serve.ts:388:32
+      7  100.0%          JS: +dispatch ext:deno_http/00_serve.ts:752:22
+    337   32.6%    JS: *mapped ext:deno_http/00_serve.ts:388:32
+    337  100.0%      Builtin: AsyncFunctionAwaitResolveClosure
+     33    3.2%    JS: *Response ext:deno_fetch/23_response.js:314:14
+     33  100.0%      JS: *mapped ext:deno_http/00_serve.ts:388:32
+     33  100.0%        JS: *dispatch ext:deno_http/00_serve.ts:752:22
+     15    1.4%    JS: *<anonymous> ext:deno_webidl/00_webidl.js:1096:10
+     15  100.0%      JS: *Response ext:deno_fetch/23_response.js:314:14
+     15  100.0%        JS: *mapped ext:deno_http/00_serve.ts:388:32
+     15  100.0%          JS: *dispatch ext:deno_http/00_serve.ts:752:22
+
+    146    6.4%  JS: *<anonymous> ext:deno_webidl/00_webidl.js:1096:10
+    146  100.0%    JS: *Response ext:deno_fetch/23_response.js:314:14
+    146  100.0%      JS: *mapped ext:deno_http/00_serve.ts:388:32
+    146  100.0%        JS: *dispatch ext:deno_http/00_serve.ts:752:22
+
+    120    5.2%  JS: *initializeAResponse ext:deno_fetch/23_response.js:176:29
+    118   98.3%    JS: *Response ext:deno_fetch/23_response.js:314:14
+    118  100.0%      JS: *mapped ext:deno_http/00_serve.ts:388:32
+    118  100.0%        JS: *dispatch ext:deno_http/00_serve.ts:752:22
+      2    1.7%    JS: *mapped ext:deno_http/00_serve.ts:388:32
+      2  100.0%      JS: *dispatch ext:deno_http/00_serve.ts:752:22
+
+     99    4.3%  JS: *mapped ext:deno_http/00_serve.ts:388:32
+     51   51.5%    JS: *dispatch ext:deno_http/00_serve.ts:752:22
+     43   43.4%    Builtin: AsyncFunctionAwaitResolveClosure
+
+     52    2.3%  /usr/lib/x86_64-linux-gnu/libc.so.6
+     24   46.2%    JS: *mapped ext:deno_http/00_serve.ts:388:32
+     24  100.0%      Builtin: AsyncFunctionAwaitResolveClosure
+     20   38.5%    /home/agent-loop/.agent-loop/instances/agent-320/repo/target/release/deno
+     16   80.0%      JS: *mapped ext:deno_http/00_serve.ts:388:32
+     16  100.0%        JS: *dispatch ext:deno_http/00_serve.ts:752:22
+      3   15.0%      JS: *initializeAResponse ext:deno_fetch/23_response.js:176:29
+      3  100.0%        JS: *Response ext:deno_fetch/23_response.js:314:14
+      3  100.0%          JS: *mapped ext:deno_http/00_serve.ts:388:32
+      3  100.0%            JS: *dispatch ext:deno_http/00_serve.ts:752:22
+      1    5.0%      JS: +<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/json_tiny.js:8:28
+      1  100.0%        JS: +mapped ext:deno_http/00_serve.ts:388:32
+      1  100.0%          JS: +dispatch ext:deno_http/00_serve.ts:752:22
+      1    1.9%    JS: ~<anonymous> ext:deno_http/00_serve.ts:1:32
+      1  100.0%      JS: ~<anonymous> ext:deno_http/00_serve.ts:1:1
+      1  100.0%        Builtin: CallApiCallbackGeneric
+      1  100.0%          Script: ~<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/json_tiny.js:1:1
+      1  100.0%            Builtin: GeneratorPrototypeNext
+      1    1.9%    JS: ^fastSyncResponseOrStream ext:deno_http/00_serve.ts:338:36
+      1  100.0%      JS: +mapped ext:deno_http/00_serve.ts:388:32
+      1  100.0%        Builtin: AsyncFunctionAwaitResolveClosure
+
+     50    2.2%  JS: *Response ext:deno_fetch/23_response.js:314:14
+     50  100.0%    JS: *mapped ext:deno_http/00_serve.ts:388:32
+     50  100.0%      JS: *dispatch ext:deno_http/00_serve.ts:752:22
+
+     38    1.7%  Builtin: CreateShallowObjectLiteral
+     30   78.9%    JS: *Response ext:deno_fetch/23_response.js:314:14
+     30  100.0%      JS: *mapped ext:deno_http/00_serve.ts:388:32
+     30  100.0%        JS: *dispatch ext:deno_http/00_serve.ts:752:22
+      5   13.2%    JS: *<anonymous> ext:deno_webidl/00_webidl.js:1096:10
+      5  100.0%      JS: *Response ext:deno_fetch/23_response.js:314:14
+      5  100.0%        JS: *mapped ext:deno_http/00_serve.ts:388:32
+      5  100.0%          JS: *dispatch ext:deno_http/00_serve.ts:752:22
+      3    7.9%    JS: +<anonymous> ext:deno_fetch/20_headers.js:464:36
+      3  100.0%      JS: +webidl.converters.ResponseInit_fast ext:deno_fetch/23_response.js:476:47
+      3  100.0%        JS: +Response ext:deno_fetch/23_response.js:314:14
+      3  100.0%          JS: +<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/json_tiny.js:8:28
+      3  100.0%            JS: +mapped ext:deno_http/00_serve.ts:388:32
+
+     35    1.5%  Builtin: AsyncFunctionAwait
+     19   54.3%    JS: *dispatch ext:deno_http/00_serve.ts:752:22
+     14   40.0%    JS: *mapped ext:deno_http/00_serve.ts:388:32
+     14  100.0%      JS: *dispatch ext:deno_http/00_serve.ts:752:22
+      1    2.9%    JS: +mapped ext:deno_http/00_serve.ts:388:32
+      1  100.0%      JS: +dispatch ext:deno_http/00_serve.ts:752:22
+      1    2.9%    JS: +dispatch ext:deno_http/00_serve.ts:752:22
+
+     34    1.5%  Builtin: LoadIC
+     20   58.8%    JS: *Response ext:deno_fetch/23_response.js:314:14
+     20  100.0%      JS: *mapped ext:deno_http/00_serve.ts:388:32
+     20  100.0%        JS: *dispatch ext:deno_http/00_serve.ts:752:22
+      6   17.6%    JS: *<anonymous> ext:deno_webidl/00_webidl.js:1096:10
+      6  100.0%      JS: *Response ext:deno_fetch/23_response.js:314:14
+      6  100.0%        JS: *mapped ext:deno_http/00_serve.ts:388:32
+      6  100.0%          JS: *dispatch ext:deno_http/00_serve.ts:752:22
+      2    5.9%    JS: +<anonymous> ext:deno_webidl/00_webidl.js:431:25
+      1   50.0%      JS: ^<anonymous> ext:deno_webidl/00_webidl.js:1096:10
+      1  100.0%        JS: ^<anonymous> ext:deno_fetch/20_headers.js:464:36
+      1  100.0%          JS: ^webidl.converters.ResponseInit_fast ext:deno_fetch/23_response.js:476:47
+      1  100.0%            JS: ^Response ext:deno_fetch/23_response.js:314:14
+      1   50.0%      JS: +<anonymous> ext:deno_webidl/00_webidl.js:1096:10
+      1  100.0%        JS: +<anonymous> ext:deno_fetch/20_headers.js:464:36
+      1  100.0%          JS: +webidl.converters.ResponseInit_fast ext:deno_fetch/23_response.js:476:47
+      1  100.0%            JS: +Response ext:deno_fetch/23_response.js:314:14
+      2    5.9%    JS: +<anonymous> ext:deno_fetch/20_headers.js:464:36
+      2  100.0%      JS: +webidl.converters.ResponseInit_fast ext:deno_fetch/23_response.js:476:47
+      2  100.0%        JS: +Response ext:deno_fetch/23_response.js:314:14
+      2  100.0%          JS: +<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/json_tiny.js:8:28
+      2  100.0%            JS: +mapped ext:deno_http/00_serve.ts:388:32
+      2    5.9%    JS: *mapped ext:deno_http/00_serve.ts:388:32
+      2  100.0%      JS: *dispatch ext:deno_http/00_serve.ts:752:22
+      1    2.9%    JS: +webidl.converters.ResponseInit_fast ext:deno_fetch/23_response.js:476:47
+      1  100.0%      JS: +Response ext:deno_fetch/23_response.js:314:14
+      1  100.0%        JS: +<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/json_tiny.js:8:28
+      1  100.0%          JS: +mapped ext:deno_http/00_serve.ts:388:32
+      1  100.0%            JS: +dispatch ext:deno_http/00_serve.ts:752:22
+      1    2.9%    JS: *<anonymous> ext:deno_webidl/00_webidl.js:431:25
+      1  100.0%      JS: +<anonymous> ext:deno_webidl/00_webidl.js:1096:10
+      1  100.0%        JS: +<anonymous> ext:deno_fetch/20_headers.js:464:36
+      1  100.0%          JS: +webidl.converters.ResponseInit_fast ext:deno_fetch/23_response.js:476:47
+      1  100.0%            JS: +Response ext:deno_fetch/23_response.js:314:14
+
+     33    1.4%  Builtin: RunMicrotasks
+
+     32    1.4%  Builtin: JSConstructStubGeneric
+     28   87.5%    JS: *mapped ext:deno_http/00_serve.ts:388:32
+     28  100.0%      JS: *dispatch ext:deno_http/00_serve.ts:752:22
+      4   12.5%    JS: *dispatch ext:deno_http/00_serve.ts:752:22
+
+     31    1.4%  __libc_malloc@@GLIBC_2.2.5
+     27   87.1%    JS: *mapped ext:deno_http/00_serve.ts:388:32
+     27  100.0%      Builtin: AsyncFunctionAwaitResolveClosure
+      3    9.7%    JS: +mapped ext:deno_http/00_serve.ts:388:32
+      3  100.0%      Builtin: AsyncFunctionAwaitResolveClosure
+
+     31    1.4%  Builtin: StringToLowerCaseIntl
+     31  100.0%    JS: *Response ext:deno_fetch/23_response.js:314:14
+     31  100.0%      JS: *mapped ext:deno_http/00_serve.ts:388:32
+     31  100.0%        JS: *dispatch ext:deno_http/00_serve.ts:752:22
+
+     29    1.3%  Builtin: GetProperty
+     27   93.1%    JS: *mapped ext:deno_http/00_serve.ts:388:32
+     27  100.0%      JS: *dispatch ext:deno_http/00_serve.ts:752:22
+      2    6.9%    JS: +mapped ext:deno_http/00_serve.ts:388:32
+      2  100.0%      JS: +dispatch ext:deno_http/00_serve.ts:752:22
+
+     27    1.2%  Builtin: LoadGlobalIC
+     22   81.5%    JS: *mapped ext:deno_http/00_serve.ts:388:32
+     22  100.0%      JS: *dispatch ext:deno_http/00_serve.ts:752:22
+      3   11.1%    JS: *dispatch ext:deno_http/00_serve.ts:752:22
+      2    7.4%    JS: +<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/json_tiny.js:8:28
+      2  100.0%      JS: +mapped ext:deno_http/00_serve.ts:388:32
+      2  100.0%        JS: +dispatch ext:deno_http/00_serve.ts:752:22
+
+     26    1.1%  Builtin: KeyedStoreIC
+     17   65.4%    JS: *Response ext:deno_fetch/23_response.js:314:14
+     17  100.0%      JS: *mapped ext:deno_http/00_serve.ts:388:32
+     17  100.0%        JS: *dispatch ext:deno_http/00_serve.ts:752:22
+      6   23.1%    JS: *<anonymous> ext:deno_webidl/00_webidl.js:1096:10
+      6  100.0%      JS: *Response ext:deno_fetch/23_response.js:314:14
+      6  100.0%        JS: *mapped ext:deno_http/00_serve.ts:388:32
+      6  100.0%          JS: *dispatch ext:deno_http/00_serve.ts:752:22
+      2    7.7%    JS: +<anonymous> ext:deno_webidl/00_webidl.js:1096:10
+      1   50.0%      JS: +<anonymous> ext:deno_fetch/20_headers.js:464:36
+      1  100.0%        JS: +webidl.converters.ResponseInit_fast ext:deno_fetch/23_response.js:476:47
+      1  100.0%          JS: +Response ext:deno_fetch/23_response.js:314:14
+      1  100.0%            JS: +<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/json_tiny.js:8:28
+      1   50.0%      JS: *Response ext:deno_fetch/23_response.js:314:14
+      1  100.0%        JS: *mapped ext:deno_http/00_serve.ts:388:32
+      1  100.0%          JS: *dispatch ext:deno_http/00_serve.ts:752:22
+      1    3.8%    JS: +fromInnerRequest ext:deno_fetch/23_request.js:617:26
+      1  100.0%      JS: +mapped ext:deno_http/00_serve.ts:388:32
+      1  100.0%        JS: +dispatch ext:deno_http/00_serve.ts:752:22
+
+     23    1.0%  Builtin: CallFunction_ReceiverIsAny
+      1    4.3%    JS: ^mapped ext:deno_http/00_serve.ts:388:32
+      1  100.0%      Builtin: AsyncFunctionAwaitResolveClosure
+      1    4.3%    JS: ^appendHeader ext:deno_fetch/20_headers.js:123:22
+      1  100.0%      JS: ^fillHeaders ext:deno_fetch/20_headers.js:63:21
+      1  100.0%        JS: ^initializeAResponse ext:deno_fetch/23_response.js:176:29
+      1  100.0%          JS: ^Response ext:deno_fetch/23_response.js:314:14
+      1  100.0%            JS: ^<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/json_tiny.js:8:28
+      1    4.3%    JS: +mapped ext:deno_http/00_serve.ts:388:32
+      1  100.0%      Builtin: AsyncFunctionAwaitResolveClosure
+      1    4.3%    JS: +<anonymous> ext:deno_webidl/00_webidl.js:1096:10
+      1  100.0%      JS: +<anonymous> ext:deno_fetch/20_headers.js:464:36
+      1  100.0%        JS: +webidl.converters.ResponseInit_fast ext:deno_fetch/23_response.js:476:47
+      1  100.0%          JS: +Response ext:deno_fetch/23_response.js:314:14
+      1  100.0%            JS: +<anonymous> file:///home/agent-loop/.agent-loop/instances/agent-320/repo/tools/perf_research/http-serve/servers/json_tiny.js:8:28
+
